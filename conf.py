@@ -291,7 +291,8 @@ TIMEZONE = "PST8PDT"
 # The format is a dictionary of {source: relative destination}.
 # Default is:
 FILES_FOLDERS = {'files/pdf/': 'pdf',
-                 'files/images/': 'images'}
+                 'files/images/': 'images',
+                 'files/extras/': ''}
 # Which means copy 'files' into 'output'
 
 # One or more folders containing code listings to be processed and published on
