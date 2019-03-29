@@ -1,0 +1,4 @@
+Sitemap: http://victorapinto.com/sitemapindex.xml
+
+User-Agent: *
+Host: victorapinto.com
