@@ -9,11 +9,11 @@
 Christine Gabrielse,  **Victor Pinto**,  Yukitoshi Nishimura,  Larry R. Lyons,  Bea Gallardo‐Lacourt,  Yue Deng <br>
 *Geophysical Research Letters, 2019*
 
-0. **Multisatellite Analysis of Plasma Pressure in the Inner Magnetosphere During the 1 June 2013 Geomagnetic Storm** ([web](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018JA025965)|[pdf](/pdf/2019-Stepanova_et_al-JGR.pdf))<br>
+0. **Multisatellite Analysis of Plasma Pressure in the Inner Magnetosphere During the 1 June 2013 Geomagnetic Storm** ([web](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018JA025965)|[ePdf](https://rdcu.be/buG6s))<br> <!-- /pdf/2019-Stepanova_et_al-JGR.pdf -->
 Marina V. Stepanova, Elizaveta E. Antonova, Pablo S. Moya, **Victor A. Pinto**, Juan A. Valdivia <br>
 *Journal of Geophysical Research: Space Physics, 2019*
 
-0. **Characteristics, Occurrence, and Decay Rates of Remnant Belts Associated With Three-Belt Events in the Earth's Radiation Belts** ([web](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018GL080274)|[pdf](/pdf/2018-Pinto_et_al-GRL.pdf))<br>
+0. **Characteristics, Occurrence, and Decay Rates of Remnant Belts Associated With Three-Belt Events in the Earth's Radiation Belts** ([web](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018GL080274)|[ePdf](https://rdcu.be/buIfm))<br> <!-- /pdf/2018-Pinto_et_al-GRL.pdf -->
  **Victor A. Pinto**,  Jacob Bortnik,  Pablo S. Moya,  Larry R. Lyons,  David G. Sibeck,  Shrikanth G. Kanekal, Harlan E. Spence,  Daniel N. Baker<br>
 *Geophysical Research Letters, 2018*
 
@@ -21,7 +21,7 @@ Marina V. Stepanova, Elizaveta E. Antonova, Pablo S. Moya, **Victor A. Pinto**, 
 Elizaveta E. Antonova, Marina V. Stepanova, Pablo S. Moya, **Victor A. Pinto** , Vadim V. Vovchenko, Ilya L. Ovchinnikov and Nikita V. Sotnikov<br>
 *Earth, Planets and Space, 2018*
 
-0. **Interplanetary parameters leading to relativistic electron enhancement and persistent depletion events at geosynchronous orbit and potential for prediction** ([web](http://onlinelibrary.wiley.com/doi/10.1002/2017JA024902/abstract)|[pdf](/pdf/2018-Pinto_et_al-JGR.pdf))<br>
+0. **Interplanetary parameters leading to relativistic electron enhancement and persistent depletion events at geosynchronous orbit and potential for prediction** ([web](http://onlinelibrary.wiley.com/doi/10.1002/2017JA024902/abstract)|[ePdf](https://rdcu.be/buIfB))<br> <!-- /pdf/2018-Pinto_et_al-JGR.pdf -->
  **Victor A. Pinto**, Hee-Jeong Kim, Larry R. Lyons, Jacob Bortnik <br>
 *Journal of Geophysical Research: Space Physics, 2018*
 
@@ -29,19 +29,19 @@ Elizaveta E. Antonova, Marina V. Stepanova, Pablo S. Moya, **Victor A. Pinto** ,
 Cristian Farias, **Victor A. Pinto** , Pablo S. Moya <br>
 *Scientific Reports, 2017*
 
-0.  **On the Effect of Geomagnetic Storms on Relativistic Electrons in the Outer Radiation Belt: Van Allen Probes Observations** ([web](http://onlinelibrary.wiley.com/doi/10.1002/2017JA024735/abstract)|[pdf](/pdf/2017-Moya_el_al-JGR.pdf))<br>
+0.  **On the Effect of Geomagnetic Storms on Relativistic Electrons in the Outer Radiation Belt: Van Allen Probes Observations** ([web](http://onlinelibrary.wiley.com/doi/10.1002/2017JA024735/abstract)|[ePdf](https://rdcu.be/buI5x))<br> <!-- /pdf/2017-Moya_el_al-JGR.pdf -->
 Pablo S. Moya, **Victor A. Pinto** , David G. Sibeck, Shrikanth G. Kanekal, Daniel N. Baker <br>
 *Journal of Geophysical Research: Space Physics, 2017*
 
-0. **Revisit of relationship between geosynchronous relativistic electron enhancements and magnetic storms** ([web](http://onlinelibrary.wiley.com/doi/10.1002/2015GL065192/abstract)|[pdf](/pdf/2015-Kim_et_al-GRL.pdf))<br>
+0. **Revisit of relationship between geosynchronous relativistic electron enhancements and magnetic storms** ([web](http://onlinelibrary.wiley.com/doi/10.1002/2015GL065192/abstract)|[ePdf](https://rdcu.be/buI5J))<br> <!-- /pdf/2015-Kim_et_al-GRL.pdf -->
 Hee-Jeong Kim, Larry Lyons, **Victor A. Pinto** , Chih-Ping Wang, Kyung-Chan Kim <br>
 *Geophysical Research Letters, 2015*
 
-0. **Weak Kinetic Alfven Waves Turbulence during the November 14th 2012 geomagnetic storm: Van Allen Probes observations** ([web](http://onlinelibrary.wiley.com/doi/10.1002/2014JA020281/abstract)|[pdf](/pdf/2015-Moya_et_al-JGR.pdf))<br>
+0. **Weak Kinetic Alfven Waves Turbulence during the November 14th 2012 geomagnetic storm: Van Allen Probes observations** ([web](http://onlinelibrary.wiley.com/doi/10.1002/2014JA020281/abstract)|[ePdf](https://rdcu.be/buI5X))<br> <!-- /pdf/2015-Moya_et_al-JGR.pdf -->
 Pablo. S. Moya, **Victor A. Pinto** , Adolfo F. Viñas, David G. Sibeck, William S. Kurth, George B. Hospodarsky, John R. Wygant <br>
 *Journal of Geophysical Research: Space Physics, 2015*
 
-0. **Spatial distribution of the eddy diffusion coefficients in the plasma sheet during quiet time and substorms from THEMIS satellite data** ([web](http://onlinelibrary.wiley.com/doi/10.1029/2010JA015887/abstract)|[pdf](/pdf/2011-Stepanova_et_al-JGR.pdf))<br>
+0. **Spatial distribution of the eddy diffusion coefficients in the plasma sheet during quiet time and substorms from THEMIS satellite data** ([web](http://onlinelibrary.wiley.com/doi/10.1029/2010JA015887/abstract)|[ePdf](https://rdcu.be/buI55))<br> <!-- /pdf/2011-Stepanova_et_al-JGR.pdf -->
 Marina Stepanova, **Victor A. Pinto** ,  Juan A. Valdivia, Elizaveta E. Antonova <br>
 *Journal of Geophysical Research: Space Physics, 2011*
 
