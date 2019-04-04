@@ -6,24 +6,24 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>http://victorapinto.com/categories/cat_blog.xml</loc>
-  <lastmod>2019-03-29T18:51:00Z</lastmod>
+  <loc>http://victorapinto.com/categories/cat_thoughts.xml</loc>
+  <lastmod>2019-04-03T23:20:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://victorapinto.com/categories/nikola.xml</loc>
-  <lastmod>2019-03-29T18:51:00Z</lastmod>
+  <lastmod>2019-04-03T23:20:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://victorapinto.com/categories/python.xml</loc>
-  <lastmod>2019-03-29T19:04:00Z</lastmod>
+  <lastmod>2019-04-03T23:20:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://victorapinto.com/categories/static.xml</loc>
-  <lastmod>2019-03-29T19:04:00Z</lastmod>
+  <lastmod>2019-04-03T23:20:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://victorapinto.com/categories/website.xml</loc>
-  <lastmod>2019-03-29T19:04:00Z</lastmod>
+  <lastmod>2019-04-03T23:20:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://victorapinto.com/galleries/rss.xml</loc>
@@ -31,10 +31,10 @@
  </sitemap>
  <sitemap>
   <loc>http://victorapinto.com/rss.xml</loc>
-  <lastmod>2019-03-29T19:04:00Z</lastmod>
+  <lastmod>2019-04-03T23:20:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://victorapinto.com/sitemap.xml</loc>
-  <lastmod>2019-03-29T23:10:00Z</lastmod>
+  <lastmod>2019-04-04T20:52:00Z</lastmod>
  </sitemap>
 </sitemapindex>

@@ -2,14 +2,12 @@
 .. slug: thoughts-on-my-new-website
 .. date: 2019-03-27 11:35:01 UTC-07:00
 .. tags: website, python, static, nikola
-.. category: Blog
-.. link:
-.. description:
+.. category: thoughts
 .. type: text
 
-I have a long story of love and hate with websites. It all started when I tried to build a personal site using Microsoft Publisher (back in 1998) instead of whatever the alternative was at that time. After that came Geocities and a few other attempts with free webhosts whose names I don't really remember. In 2002, college opened a whole new world with people that actually knew how to do websites using HTML and PHP. So I learned a bit.
+I find creating websites a very difficult and time consuming task. Whether it was Microsoft Publisher (back in 1998), Geocities, HTML, PHP+HTML, Blogger, Wordpress or now a Static website generated in Nikola (Python based) I have always encountered the same problem. Designing is hard, creating content of quality and at a consistent pace is hard, and by the time I get proficient with a particular technology or programming language, it's already obsolete. I have still try them all, created countless websites for courses I taught, shared a fair share of nonsense in blogs, and maintained a few mid-sized projects with different degrees of success.
 
-My main problem has always been that I'm not good at generating content at a reasonable pace, and that I have always struggled with website design.
+So, why am I trying again? The main reason is that I realized that after so many years of education, research and experience, I'm still really bad at telling people the things I do and why they are (sometimes) important. In part, this is because I never feel very secure in my knowledge and I hate when I communicate ideas that are incorrect, but also because I have never mastered the art of communicating in English (which is not my native language).
 
 I feel that I need to practice writing in English beyond the scientific writing I do from time to time to publish a paper, so here I am.
 
