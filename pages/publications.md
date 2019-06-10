@@ -9,7 +9,7 @@
 **Victor A. Pinto**,  Didier Mourenas,  Jacob Bortnik,  Xiao-Jia Zhang,  Anton V. Artemyev,  Pablo S. Moya,  Larry R. Lyons <br>
 *Journal of Geophysical Research: Space Physics, (in press)*
 
-0. **Storm Time Mesoscale Plasma Flows in the Nightside High‐Latitude Ionosphere: A Statistical Survey of Characteristics** ([web](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2018GL081539)|[pdf](/pdf/2019-Gabrielse_et_al-JGR.pdf))<br>
+0. **Storm Time Mesoscale Plasma Flows in the Nightside High‐Latitude Ionosphere: A Statistical Survey of Characteristics** ([web](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2018GL081539)|[ePdf](https://rdcu.be/bGg1A))<br>
 Christine Gabrielse,  **Victor Pinto**,  Yukitoshi Nishimura,  Larry R. Lyons,  Bea Gallardo‐Lacourt,  Yue Deng <br>
 *Geophysical Research Letters, 2019*
 
