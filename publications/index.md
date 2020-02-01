@@ -5,9 +5,9 @@
 ## Peer-reviewed publications
 ***
 
-0. **Decay of Ultrarelativistic Remnant Belt Electrons Through Scattering by Plasmaspheric Hiss**   ([web](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2019JA026509))<br>
+0. **Decay of Ultrarelativistic Remnant Belt Electrons Through Scattering by Plasmaspheric Hiss**   ([web](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2019JA026509)|[ePdf](https://rdcu.be/b04sp))<br>
 **Victor A. Pinto**,  Didier Mourenas,  Jacob Bortnik,  Xiao-Jia Zhang,  Anton V. Artemyev,  Pablo S. Moya,  Larry R. Lyons <br>
-*Journal of Geophysical Research: Space Physics, (in press)*
+*Journal of Geophysical Research: Space Physics, 2019*
 
 0. **Storm Time Mesoscale Plasma Flows in the Nightside High‐Latitude Ionosphere: A Statistical Survey of Characteristics** ([web](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2018GL081539)|[ePdf](https://rdcu.be/bGg1A))<br>
 Christine Gabrielse,  **Victor Pinto**,  Yukitoshi Nishimura,  Larry R. Lyons,  Bea Gallardo‐Lacourt,  Yue Deng <br>
@@ -21,7 +21,7 @@ Marina V. Stepanova, Elizaveta E. Antonova, Pablo S. Moya, **Victor A. Pinto**, 
  **Victor A. Pinto**,  Jacob Bortnik,  Pablo S. Moya,  Larry R. Lyons,  David G. Sibeck,  Shrikanth G. Kanekal, Harlan E. Spence,  Daniel N. Baker<br>
 *Geophysical Research Letters, 2018*
 
-0. **Processes in auroral oval and outer electron radiation belt** ([web](https://earth-planets-space.springeropen.com/articles/10.1186/s40623-018-0898-1)|[pdf](/pdf/2018-Antonova_et_al-EPS.pdf))<br>
+0. **Processes in auroral oval and outer electron radiation belt** ([web](https://earth-planets-space.springeropen.com/articles/10.1186/s40623-018-0898-1)| Open Access)<br>
 Elizaveta E. Antonova, Marina V. Stepanova, Pablo S. Moya, **Victor A. Pinto** , Vadim V. Vovchenko, Ilya L. Ovchinnikov and Nikita V. Sotnikov<br>
 *Earth, Planets and Space, 2018*
 
@@ -29,7 +29,7 @@ Elizaveta E. Antonova, Marina V. Stepanova, Pablo S. Moya, **Victor A. Pinto** ,
  **Victor A. Pinto**, Hee-Jeong Kim, Larry R. Lyons, Jacob Bortnik <br>
 *Journal of Geophysical Research: Space Physics, 2018*
 
-0. **What is the temperature of a moving body?** ([web](https://www.nature.com/articles/s41598-017-17526-4)|[pdf](/pdf/2017-Farias_et_al-SciRep.pdf))<br>
+0. **What is the temperature of a moving body?** ([web](https://www.nature.com/articles/s41598-017-17526-4) Open Access)<br>
 Cristian Farias, **Victor A. Pinto** , Pablo S. Moya <br>
 *Scientific Reports, 2017*
 
@@ -49,7 +49,7 @@ Pablo. S. Moya, **Victor A. Pinto** , Adolfo F. Viñas, David G. Sibeck, William
 Marina Stepanova, **Victor A. Pinto** ,  Juan A. Valdivia, Elizaveta E. Antonova <br>
 *Journal of Geophysical Research: Space Physics, 2011*
 
-0. **Estimation of the eddy-diffusion coefficients in the plasma sheet using THEMIS satellite data** ([web](https://www.sciencedirect.com/science/article/pii/S1364682611001453)|[pdf](/pdf/2011-Pinto_et_al-JASTP.pdf))<br>
+0. **Estimation of the eddy-diffusion coefficients in the plasma sheet using THEMIS satellite data** ([web](https://www.sciencedirect.com/science/article/pii/S1364682611001453)|[pdf](/pdf/201102-Pinto_et_al-JASTP.pdf))<br>
  **Victor A. Pinto**, Marina Stepanova, Elizaveta E. Antonova,  Juan A. Valdivia  <br>
 *Journal of Atmospheric and Solar-Terrestrial Physics, 2011*
 <br>
