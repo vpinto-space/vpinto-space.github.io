@@ -19,3 +19,7 @@ To see it::
 To check all available commands::
 
     nikola help
+
+To deploy
+
+    nikola github_deploy

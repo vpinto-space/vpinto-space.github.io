@@ -142,7 +142,7 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/publications/", "Publications"),
-        ("/pdf/201901_cv_full.pdf", "Curriculum")
+        ("/pdf/victor_pinto_cv.pdf", "Curriculum")
 #        ("/posts/", "Blog"),
 #        ("/projects/", "Projects"),
 #        ("/contact/", "Contact")
