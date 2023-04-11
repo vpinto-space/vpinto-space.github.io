@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>II Workshop de Instrumentación en Geociencias</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		/* Styling for the website */
+		body {
+			margin: 0;
+			font-family: Arial, sans-serif;			
+  		  	background: url("./earth-magnetic-field-lines.jpg") no-repeat center center fixed;
+		}
+		header {
+			/*background-color: #333*/;
+			color: white;
+			padding: 100px 10px 100px 10px;
+			text-align: center;
+			font-size: 40px;
+			font-weight: bold;
+			min-height: 400px;
+		}
+		nav {
+			background-color: #333;
+			overflow: hidden;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+		nav a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+			font-weight: bold;
+		}
+		nav a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+		section {
+			padding: 50px;
+			background-color: white;
+			min-height: 100px;
+		}
+		section-title {
+			padding: 50px;
+			min-height: 100vh;
+		}
+		h1 {
+			font-size: 36px;
+			color: white;
+			margin-top: 50;
+			text-align: center;
+			font-weight: bold;
+		}
+		h4 {
+			font-size: 18px;
+			line-height: 1.5;
+			text-align: center;
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 1.5;
+			text-align: justify;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin: auto;
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		footer {
+			background-color: #333;
+			color: white;
+			padding: 10px;
+			text-align: center;
+			font-size: 14px;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			// Add smooth scrolling to all links
+			$("a").on('click', function(event) {
+
+				// Make sure this.hash has a value before overriding default behavior
+				if (this.hash !== "") {
+					// Prevent default anchor click behavior
+					event.preventDefault();
+
+					// Store hash
+					var hash = this.hash;
+
+					// Using jQuery's animate() method to add smooth page scroll
+					// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 800, function(){
+
+						// Add hash (#) to URL when done scrolling (default click behavior)
+						window.location.hash = hash;
+					});
+				} // End if
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+	<header>
+		II Workshop de Instrumentación en Geociencias
+	</header>
+
+	<nav>
+		<a href="#about">Información General</a>
+		<a href="#fechas">Fechas Importantes</a>
+		<a href="#schedule">Programa</a>
+		<a href="#organizers">Organizadores</a>
+		<a href="#register">Registración</a>
+	</nav>
+
+	<section id="presentacion">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae libero eget magna bibendum feugiat. Fusce ullamcorper nulla vel neque blandit, a porttitor velit volutpat. Duis ut placerat quam. Donec sit amet congue orci. Nam id erat velit. Nam ac eros sit amet augue bibendum maximus. Sed vel erat ut mi facilisis malesuada. Praesent sed leo ut nunc ullamcorper maximus vel at dui. Nulla facilisi. Nullam vel gravida ipsum. Vivamus vel malesuada neque. Nulla ac leo lobortis, volutpat ex quis, rutrum nisi. Donec laoreet leo quis nulla malesuada varius.</p>
+	</section>
+
+	<section-title id="about"><h1> Información General </h1></section-title>
+	<section>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae libero eget magna bibendum feugiat. Fusce ullamcorper nulla vel neque blandit, a porttitor velit volutpat. Duis ut placerat quam. Donec sit amet congue orci. Nam id erat velit. Nam ac eros sit amet augue bibendum maximus. Sed vel erat ut mi facilisis malesuada. Praesent sed leo ut nunc ullamcorper maximus vel at dui. Nulla facilisi. Nullam vel gravida ipsum. Vivamus vel malesuada neque. Nulla ac leo lobortis, volutpat ex quis, rutrum nisi. Donec laoreet leo quis nulla malesuada varius.</p>
+	</section>
+
+	<section-title id="fechas"><h1> Fechas Importantes </h1></section-title>
+	<section>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae libero eget magna bibendum feugiat. Fusce ullam corper nulla vel neque blandit, a porttitor velit volutpat. Duis ut placerat quam. Donec sit amet congue orci. Nam id erat velit. Nam ac eros sit amet augue bibendum maximus. Sed vel erat ut mi facilisis malesuada. Praesent sed leo ut nunc ullamcorper maximus vel at dui. Nulla facilisi. Nullam vel gravida ipsum. Vivamus vel malesuada neque. Nulla ac leo lobortis, volutpat ex quis, rutrum nisi. Donec laoreet leo quis nulla malesuada varius.</p>
+	</section>
+
+	<section-title id="schedule"><h1>Programa</h1></section-title>
+	<section>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae libero eget magna bibendum feugiat. Fusce ullamcorper nulla vel neque blandit, a porttitor velit volutpat. Duis ut placerat quam. Donec sit amet congue orci. Nam id erat velit. Nam ac eros sit amet augue bibendum maximus. Sed vel erat ut mi facilisis malesuada. Praesent sed leo ut nunc ullamcorper maximus vel at dui. Nulla facilisi. Nullam vel gravida ipsum. Vivamus vel malesuada neque. Nulla ac leo lobortis, volutpat ex quis, rutrum nisi. Donec laoreet leo quis nulla malesuada varius.</p>
+	</section>
+
+	<section-title id="organizers"><h1>Organizadores</h1>
+	<section>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae libero eget magna bibendum feugiat. Fusce ullamcorper nulla vel neque blandit, a porttitor velit volutpat. Duis ut placerat quam. Donec sit amet congue orci. Nam id erat velit. Nam ac eros sit amet augue bibendum maximus. Sed vel erat ut mi facilisis malesuada. Praesent sed leo ut nunc ullamcorper maximus vel at dui. Nulla facilisi. Nullam vel gravida ipsum. Vivamus vel malesuada neque. Nulla ac leo lobortis, volutpat ex quis, rutrum nisi. Donec laoreet leo quis nulla malesuada varius.</p>
+	</section>
+	
+	<section-title id="register"><h1>Registrate</h1>
+	<section>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae libero eget magna bibendum feugiat. Fusce ullamcorper nulla vel neque blandit, a porttitor velit volutpat. Duis ut placerat quam. Donec sit amet congue orci. Nam id erat velit. Nam ac eros sit amet augue bibendum maximus. Sed vel erat ut mi facilisis malesuada. Praesent sed leo ut nunc ullamcorper maximus vel at dui. Nulla facilisi. Nullam vel gravida ipsum. Vivamus vel malesuada neque. Nulla ac leo lobortis, volutpat ex quis, rutrum nisi. Donec laoreet leo quis nulla malesuada varius.</p>
+	
+		<form>
+			<label for="name">Name:</label><br>
+			<input type="text" id="name" name="name" required><br>
+
+			<label for="email">Email:</label><br>
+			<input type="email" id="email" name="email" required><br>
+
+			<label for="phone">Phone:</label><br>
+			<input type="tel" id="phone" name="phone" required><br>
+
+			<label for="ticket-type">Ticket Type:</label><br>
+			<select id="ticket-type" name="ticket-type" required>
+				<option value="">--Select--</option>
+				<option value="general">General Admission</option>
+				<option value="vip">VIP Admission</option>
+			</select><br>
+
+			<input type="submit" value="Submit">
+	</form>
+	</section>
+
+<footer>
+	<h4>2023 - II Workshop en Instrumentación en Geociencias</h4>
+</footer>
+
+</body>
+</html>
