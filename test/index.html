@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Heliofísica USACH</title>
+  <meta name="description" content="Mini-sitio informativo del proyecto/centro. Diseño simple, veloz y accesible." />
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header auto-cargado -->
+<div id="header"></div>
+
+<!-- ===== HERO ===== -->
+<section class="hero container" id="inicio">
+  <h1>HelioFísica USACH<br>que acerca la ciencia a la comunidad</h1>
+  <p>Breve bajada: 1 o 2 líneas que expliquen misión/propósito. Ej.: Investigamos fenómenos físicos y transferimos conocimiento para resolver problemas reales en Chile y el mundo.</p>
+  <div class="actions">
+    <a class="btn primary" href="#destacado">Ver destacado</a>
+    <a class="btn" href="#lineas">Explorar líneas</a>
+  </div>
+  <div class="kpis" aria-label="Indicadores">
+    <div class="kpi"><b>12</b><span>Proyectos activos</span></div>
+    <div class="kpi"><b>8</b><span>Laboratorios</span></div>
+    <div class="kpi"><b>35</b><span>Investigadores(as)</span></div>
+    <div class="kpi"><b>+120</b><span>Publicaciones</span></div>
+  </div>
+</section>
+
+<!-- ===== BANNER ===== -->
+<section class="banner" role="region" aria-label="Aviso importante">
+  <div class="container">
+    <p><b>⚡ Novedad:</b> Se abrió la convocatoria 2025 para pasantías de verano en Heliofísica USACH. 
+    <a href="#contacto" class="btn small">Postula aquí</a></p>
+  </div>
+</section>
+
+<!-- ===== LÍNEAS DE INVESTIGACIÓN ===== -->
+<section class="section container" id="lineas">
+  <h2>Líneas de investigación</h2>
+  <p class="lead">Selecciona una línea para ver proyectos, publicaciones y colaboraciones.</p>
+  <div class="grid" role="list">
+    <article class="card" role="listitem">
+      <div class="card-media"><span class="chip">Astrofísica</span></div>
+      <div class="card-body">
+        <h3>Heliofísica y clima espacial</h3>
+        <p>Modelado de eyecciones coronales y su impacto en tecnologías terrestres.</p>
+      </div>
+    </article>
+    <article class="card" role="listitem">
+      <div class="card-media"><span class="chip">Materia Condensada</span></div>
+      <div class="card-body">
+        <h3>Materiales 2D</h3>
+        <p>Propiedades eléctricas y ópticas en heteroestructuras de van der Waals.</p>
+      </div>
+    </article>
+    <article class="card" role="listitem">
+      <div class="card-media"><span class="chip">Educación</span></div>
+      <div class="card-body">
+        <h3>Didáctica de la Física</h3>
+        <p>Innovaciones pedagógicas y evaluación formativa en aula escolar y universitaria.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== DESTACADO ===== -->
+<section class="section container" id="destacado">
+  <h2>Destacado</h2>
+  <div class="feature">
+    <div class="frame">
+      <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1600&auto=format&fit=crop" alt="Imagen ilustrativa de investigación" loading="lazy">
+    </div>
+    <div class="copy">
+      <h3>Una historia científica en 3 actos</h3>
+      <p>Cuenta una historia breve sobre una investigación, con foco humano y visual.</p>
+      <ul>
+        <li><b>Acto I:</b> El problema y su relevancia pública.</li>
+        <li><b>Acto II:</b> El método y la colaboración multidisciplinar.</li>
+        <li><b>Acto III:</b> El impacto y próximos pasos.</li>
+      </ul>
+      <a class="btn" href="#noticias">Leer más</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NOTICIAS / EVENTOS ===== -->
+<section class="section container" id="noticias">
+  <h2>Noticias & Eventos</h2>
+  <div class="list" role="list" aria-label="Listado de noticias y actividades">
+    <div class="item" role="listitem">
+      <time datetime="2025-08-12">12 ago 2025</time>
+      <div>
+        <b>Seminario de heliofísica</b>
+        <div class="muted">Sala 101, 11:00 h · Expositor(a): Dr. Apellido</div>
+      </div>
+      <span class="tag" aria-label="Tipo: actividad">Actividad</span>
+    </div>
+    <div class="item" role="listitem">
+      <time datetime="2025-07-30">30 jul 2025</time>
+      <div>
+        <b>Nuevo paper en Physical Review</b>
+        <div class="muted">Materiales 2D y excitones. DOI: 10.xxxx/xxxxx</div>
+      </div>
+      <span class="tag" style="background:rgba(14,165,233,.18); border-color:rgba(14,165,233,.45)" aria-label="Tipo: noticia">Noticia</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACTO ===== -->
+<section class="section container" id="contacto">
+  <h2>Contacto</h2>
+  <p class="lead">Escríbenos para prensa, difusión, pasantías o colaboraciones.</p>
+  <form class="card" onsubmit="event.preventDefault(); alert('¡Gracias! Te contactaremos pronto.');">
+    <div class="card-body" style="display:grid; gap:10px; grid-template-columns:1fr 1fr">
+      <label>Nombre
+        <input required name="nombre" placeholder="Nombre y apellido" style="width:100%">
+      </label>
+      <label>Email
+        <input required type="email" name="email" placeholder="nombre@correo.cl" style="width:100%">
+      </label>
+      <label style="grid-column: 1/-1">Mensaje
+        <textarea required name="mensaje" rows="4" placeholder="Cuéntanos brevemente" style="width:100%"></textarea>
+      </label>
+      <div style="display:flex; gap:10px; align-items:center">
+        <button class="btn primary" type="submit">Enviar</button>
+        <span class="muted">o escribe a <a href="mailto:hpc.fisica@usach.cl">hpc.fisica@usach.cl</a></span>
+      </div>
+    </div>
+  </form>
+</section>
+
+<!-- Footer auto-cargado -->
+<div id="footer"></div>
+
+<script>
+// ===== Cargar header/footer =====
+async function loadPartial(id, file) {
+  const el = document.getElementById(id);
+  const resp = await fetch(file);
+  el.innerHTML = await resp.text();
+}
+loadPartial("header", "header.html");
+loadPartial("footer", "footer.html");
+</script>
+
+<style>
+.muted{ color: var(--muted); }
+input, textarea{ background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.12); color:var(--text); border-radius:10px; padding:10px }
+input:focus, textarea:focus{ outline: 2px solid var(--primary); border-color: transparent }
+.kbd *:focus{ outline-offset: 2px }
+</style>
+
+</body>
+</html>
