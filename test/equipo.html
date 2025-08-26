@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Equipo – Heliofísica USACH</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="header"></div>
+
+<section class="hero container">
+  <h1>Nuestro Equipo</h1>
+  <p>Académicos(as), investigadores(as) y estudiantes del proyecto.</p>
+</section>
+
+<section class="section container">
+  <div class="grid">
+    <article class="card">
+      <div class="card-media"><span class="chip">Dirección</span></div>
+      <div class="card-body">
+        <h3>Dr. Victor Pinto</h3>
+        <p>Director(a). Áreas: plasma, magnetohidrodinámica.</p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-media"><span class="chip">Investigación</span></div>
+      <div class="card-body">
+        <h3>Dr. Roberto Bernal</h3>
+        <p>Investigadora responsable. Áreas: óptica no lineal.</p>
+      </div>
+    </article>
+    <!-- Agregar más integrantes -->
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<script>
+async function loadPartial(id, file) {
+  const el = document.getElementById(id);
+  const resp = await fetch(file);
+  el.innerHTML = await resp.text();
+}
+loadPartial("header", "header.html");
+loadPartial("footer", "footer.html");
+</script>
+
+</body>
+</html>
