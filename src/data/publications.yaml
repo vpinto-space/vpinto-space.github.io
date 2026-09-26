@@ -7,30 +7,30 @@
 # Accepted papers without a DOI yet: omit `doi`, set `inPress: true`.
 # Pages sort newest first by year; within a year, file order is kept.
 #
-# Last checked against the tenure-dossier publication table (DOIs verified): 2026-09-25.
+# Last checked against the tenure-dossier table and the published PDFs: 2026-09-26.
 
 - id: 2026-coelloguzmn
   year: 2026
   type: article
-  citation: Coello-Guzmán, M., **Pinto, V.A.**, Navarro, R., Moya, P.S. The effect of expansion and instabilities in the thermodynamic regulation of the young solar wind. *Astronomy & Astrophysics*.
+  citation: "Coello-Guzmán, M., **Pinto, V.A.**, Navarro, R.E., Moya, P.S. The effect of expansion and instabilities in the thermodynamic regulation of the young solar wind plasma. *Astronomy & Astrophysics*."
   inPress: true
 
 - id: 2026-marchezi
   year: 2026
   type: article
-  citation: 'Marchezi, J.P., ..., **Pinto, V.A.**, et al. On the effects of the solar wind structure in the global distribution of dBH/dt spikes. *JGR: Space Physics*.'
+  citation: "Marchezi, J.P., Keesee, A., Coughlan, M., Mukundan, R., **Pinto, V.**, Da Silva, L.A., Alves, L.R., Connor, H., Hampton, D. On the effects of the solar wind structure in the global distribution of dBH/dt spikes during geomagnetic storms. *JGR: Space Physics*."
   doi: https://doi.org/10.1029/2025JA034994
 
 - id: 2026-caro
   year: 2026
   type: article
-  citation: Caro, G., ..., **Pinto, V.A.**, et al. Comparative performance analysis of five magnetometers for geomagnetic monitoring. *Sensors*.
+  citation: "Caro, G., Carrasco, E., Diaz Peña, J., Urra, B., Rojo, E., Castro, L., Bravo, M., **Pinto, V.**, Stepanova, M., Godoy, A., Ovalle, E., Denardini, C.M., Su Chen, S. Comparative performance analysis of five magnetometers for geomagnetic monitoring. *Sensors*, 26, 4700."
   doi: https://doi.org/10.3390/s26154700
 
 - id: 2026-inostroza
   year: 2026
   type: article
-  citation: 'Inostroza, A.M., Diaz-Peña, J., ..., **Pinto, V.A.**, et al. The Role of auroral phenomena in the dynamics of the outer radiation belt during the 1 June 2013 geomagnetic storm. *JGR: Space Physics*, 131, e2026JA035123.'
+  citation: "Inostroza, A.M., Díaz Peña, J., Coello-Guzmán, M., Stepanova, M., **Pinto, V.A.**, Navarro, R.E., Espinoza, J.M., Kolomiytseva, E.A., Antonova, E.E. The role of auroral phenomena in the dynamics of the outer radiation belt during the 1 June 2013 geomagnetic storm. *JGR: Space Physics*, 131, e2026JA035123."
   doi: https://doi.org/10.1029/2026JA035123
 
 - id: 2026-stepanova
