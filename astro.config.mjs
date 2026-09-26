@@ -1,9 +1,11 @@
 // https://astro.build/config
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://victorapinto.com',
   output: 'static',
+  integrations: [sitemap()],
   build: {
     // Inline page CSS directly into HTML so GitHub Pages never has to serve
     // /_astro/*.css as a separate request (avoids the 404s that happen when

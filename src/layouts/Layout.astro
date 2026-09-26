@@ -3,6 +3,33 @@ import '../styles/global.css';
 const lang = Astro.currentLocale === 'en' ? 'en' : 'es';
 const { title, description } = Astro.props;
 const p = (path) => lang === 'es' ? path : `/en${path}`;
+// ES pages live at /x/, EN pages at /en/x/ (same slugs).
+const site = 'https://victorapinto.com';
+const here = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
+const esPath = here.replace(/^\/en(\/|$)/, '/');
+const enPath = esPath === '/' ? '/en/' : `/en${esPath}`;
+const canonicalUrl = `${site}${here}`;
+const pageTitle = `${title} — Victor Pinto`;
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Victor A. Pinto Abarzúa',
+  url: 'https://victorapinto.com',
+  jobTitle: 'Assistant Professor of Physics',
+  affiliation: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Universidad de Santiago de Chile (USACH)',
+  },
+  email: 'mailto:victor.pinto@usach.cl',
+  sameAs: [
+    'https://scholar.google.com/citations?user=nEqGWqoAAAAJ',
+    'https://orcid.org/0000-0003-1210-167X',
+    'https://github.com/vpinto-space',
+    'https://twitter.com/vpintoa',
+    'https://www.researchgate.net/profile/Victor-Pinto-9',
+  ],
+};
 ---
 
 <!doctype html>
@@ -10,16 +37,32 @@ const p = (path) => lang === 'es' ? path : `/en${path}`;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title} — Victor Pinto</title>
+    <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="canonical" href={`https://victorapinto.com${lang === 'en' ? '/en/' : '/'}`} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang="es" href={`${site}${esPath}`} />
+    <link rel="alternate" hreflang="en" href={`${site}${enPath}`} />
+    <link rel="alternate" hreflang="x-default" href={`${site}${esPath}`} />
+
+    <!-- Open Graph / Twitter Card. TODO: add og:image / twitter:image once a shared preview image exists. -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="Victor Pinto" />
+    <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'es_CL'} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
   </head>
   <body>
     <header>
       <nav>
         <a href={p('/')} class="brand">Victor A. Pinto Abarzúa</a>
-        <div style="display:flex;gap:1.3rem;align-items:center;flex-wrap:wrap">
+        <div class="nav-links">
           <a href={p('/about')}>{lang === 'en' ? 'About' : 'Sobre mí'}</a>
           <a href={p('/research')}>{lang === 'en' ? 'Research' : 'Investigación'}</a>
           <a href={p('/publications')}>{lang === 'en' ? 'Publications' : 'Publicaciones'}</a>
@@ -29,8 +72,8 @@ const p = (path) => lang === 'es' ? path : `/en${path}`;
           <a href="https://heliousach.github.io" target="_blank" rel="noopener" class="badge badge-accent">{lang === 'en' ? 'Research Group →' : 'Grupo de investigación →'}</a>
           <span class="lang-toggle">
             {lang === 'es'
-              ? <a href="/en/" style="color:var(--accent)">EN</a>
-              : <a href="/" style="color:var(--accent)">ES</a>
+              ? <a href={enPath} hreflang="en" lang="en">EN</a>
+              : <a href={esPath} hreflang="es" lang="es">ES</a>
             }
           </span>
         </div>
@@ -38,7 +81,7 @@ const p = (path) => lang === 'es' ? path : `/en${path}`;
     </header>
     <main><slot /></main>
     <footer>
-      <div style="margin-bottom:1rem">
+      <div class="footer-links">
         <a href="mailto:victor.pinto@usach.cl">Email</a>
         <a href="https://scholar.google.com/citations?user=nEqGWqoAAAAJ" target="_blank" rel="noopener">Scholar</a>
         <a href="https://orcid.org/0000-0003-1210-167X" target="_blank" rel="noopener">ORCID</a>
@@ -46,7 +89,7 @@ const p = (path) => lang === 'es' ? path : `/en${path}`;
         <a href="https://twitter.com/vpintoa" target="_blank" rel="noopener">X</a>
         <a href="https://www.researchgate.net/profile/Victor-Pinto-9" target="_blank" rel="noopener">ResearchGate</a>
       </div>
-      <p style="font-size:0.8rem;color:var(--text-muted)">&copy; {new Date().getFullYear()} Victor A. Pinto Abarzúa</p>
+      <p class="footer-fine">&copy; {new Date().getFullYear()} Victor A. Pinto Abarzúa</p>
     </footer>
   </body>
 </html>

@@ -1,0 +1,25 @@
+---
+import { getPublications } from '../lib/publications';
+import Publication from './Publication.astro';
+
+interface Props { lang: 'es' | 'en' }
+const { lang } = Astro.props;
+
+const pubs = await getPublications();
+const articles = pubs.filter((p) => p.type === 'article');
+const other = pubs.filter((p) => p.type === 'other');
+const years = [...new Set(articles.map((p) => p.year))];
+---
+{years.map((y) => (
+  <Fragment>
+    <h2>{y}</h2>
+    <div class="section">
+      {articles.filter((p) => p.year === y).map((p) => <Publication pub={p} lang={lang} />)}
+    </div>
+  </Fragment>
+))}
+
+<h2>{lang === 'en' ? 'Proceedings, book chapters, and white papers' : 'Actas, capítulos de libro y white papers'}</h2>
+<div class="section">
+  {other.map((p) => <Publication pub={p} lang={lang} showYear />)}
+</div>
