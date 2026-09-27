@@ -1,0 +1,18 @@
+---
+// "CV (PDF)" + "Email" buttons. The CV button only appears once the PDF exists
+// in public/ (scripts/build-cv.py generates it).
+import { site, cvFile } from '../lib/data';
+import { ui, type Lang } from '../lib/i18n';
+interface Props { lang: Lang; other?: boolean }
+const { lang, other = false } = Astro.props;
+const t = ui[lang];
+const mine = cvFile(lang);
+const otherLang = lang === 'es' ? 'en' : 'es';
+const theirs = cvFile(otherLang);
+---
+<div class="buttons">
+  {mine && <a class="btn btn-primary" href={mine} download>{t.cv}</a>}
+  <a class="btn" href={`mailto:${site.contact.email}`}>{t.email}</a>
+  <slot />
+</div>
+{other && theirs && <p class="meta cv-other"><a href={theirs} download hreflang={otherLang}>{t.cvOther}</a></p>}

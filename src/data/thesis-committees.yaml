@@ -1,0 +1,12 @@
+# Thesis committees (examiner). CV PDF only — not shown on the website.
+
+- { id: zamorano, name: Alejandro Zamorano, degree: Doctorado, degree_en: Ph.D., institution: U. de Chile, year: 2026 }
+- { id: flandez, name: Eduardo Flández, degree: Doctorado, degree_en: Ph.D., institution: U. de Chile, year: 2026 }
+- { id: castillo-morales, name: Fernando Castillo Morales, degree: Magíster, degree_en: M.Sc., institution: USACH, year: 2025 }
+- { id: darehmoradi, name: Mohammad Darehmoradi, degree: Magíster, degree_en: M.Sc., institution: USACH, year: 2025 }
+- { id: espinoza-msc, name: José M. Espinoza, degree: Magíster, degree_en: M.Sc., institution: USACH, year: 2024 }
+- { id: zurita, name: Tomás Zurita, degree: Magíster, degree_en: M.Sc., institution: U. de Chile, year: 2024 }
+- { id: barra, name: Ángel Barra, degree: Ingeniería Física, degree_en: Physics Engineering, institution: USACH, year: 2024 }
+- { id: silva, name: Javier Silva, degree: Magíster, degree_en: M.Sc., institution: U. de Chile, year: 2023 }
+- { id: tapia, name: Francisca Tapia, degree: Magíster, degree_en: M.Sc., institution: U. de Concepción, year: 2023 }
+- { id: espinoza-ing, name: José M. Espinoza, degree: Ingeniería Física, degree_en: Physics Engineering, institution: USACH, year: 2022 }

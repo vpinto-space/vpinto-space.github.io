@@ -1,0 +1,137 @@
+# General settings: identity, bios, contact, profiles, CV files, portrait.
+# Fields ending in _en = English (optional, falls back to Spanish).
+
+name: Victor A. Pinto Abarzúa
+shortName: Victor Pinto
+initials: VP
+url: https://victorapinto.com
+
+role: Profesor Asistente, Departamento de Física
+role_en: Assistant Professor, Department of Physics
+institution: Universidad de Santiago de Chile (USACH)
+admin: Subdirector de Docencia (desde agosto de 2025)
+admin_en: Associate Chair for Teaching (since August 2025)
+
+# Portrait: put a vertical (3:4) photo in public/images/ and write its path here,
+# e.g. /images/victor-pinto.jpg. Empty = initials tile (same size, no layout change).
+portrait: ""
+portraitAlt: Retrato de Victor Pinto
+portraitAlt_en: Portrait of Victor Pinto
+
+# Semester shown as "current" on the Teaching page.
+currentSemester: 2026-2
+
+affiliations:
+  - name: Departamento de Física, USACH
+    name_en: Department of Physics, USACH
+    url: https://fisica.usach.cl
+  - name: HelioUSACH — co-director con la Dra. Marina Stepanova
+    name_en: HelioUSACH — co-lead with Prof. Marina Stepanova
+    short: HelioUSACH
+    url: https://heliousach.github.io
+  - name: CIRAS — Center for Interdisciplinary Research in Astrophysics and Space Sciences
+    short: CIRAS
+    url: https://www.ciras.cl/
+
+bio:
+  short: >-
+    Soy físico espacial. Estudio cómo el viento solar controla los cinturones de radiación
+    de la Tierra y desarrollo modelos de machine learning para predecir el clima espacial y
+    sus efectos en tierra. En la USACH enseño electromagnetismo y física de la heliosfera, y
+    co-dirijo el grupo HelioUSACH junto a la Dra. Marina Stepanova.
+  short_en: >-
+    I am a space physicist. I study how the solar wind controls Earth's radiation belts and
+    build machine learning models to forecast space weather and its effects on the ground. At
+    USACH I teach electromagnetism and heliospheric physics, and I co-lead the HelioUSACH group
+    with Prof. Marina Stepanova.
+  long:
+    - >-
+      Soy Profesor Asistente del Departamento de Física de la Universidad de Santiago de Chile
+      (USACH) desde 2022 y Subdirector de Docencia del departamento desde agosto de 2025.
+      Co-dirijo, junto a la Dra. Marina Stepanova, el grupo de investigación en Heliofísica y
+      Clima Espacial (HelioUSACH), afiliado al CIRAS.
+    - >-
+      Me doctoré en Ciencias Atmosféricas y Oceánicas en UCLA (2019), con Larry Lyons y Jacob
+      Bortnik, estudiando la influencia del viento solar en los electrones relativistas de los
+      cinturones de radiación. Luego fui investigador postdoctoral en el Space Science Center de
+      la University of New Hampshire (2020–2022), donde trabajé en la predicción de
+      perturbaciones magnéticas en tierra con deep learning. Antes estudié física en la
+      Universidad de Chile.
+    - >-
+      Soy editor asociado de la revista Space Weather (AGU/Wiley), he integrado paneles de
+      evaluación de NASA y hablo con frecuencia con la prensa sobre clima espacial, auroras y
+      exploración espacial.
+  long_en:
+    - >-
+      I have been an Assistant Professor in the Department of Physics at Universidad de Santiago
+      de Chile (USACH) since 2022, and the department's Associate Chair for Teaching since August
+      2025. I co-lead the Heliophysics and Space Weather research group (HelioUSACH) with
+      Prof. Marina Stepanova; the group is affiliated with CIRAS.
+    - >-
+      I received my Ph.D. in Atmospheric and Oceanic Sciences from UCLA (2019), advised by
+      Larry Lyons and Jacob Bortnik, working on how the solar wind drives relativistic electrons
+      in the radiation belts. I was then a postdoctoral researcher at the Space Science Center
+      of the University of New Hampshire (2020–2022), where I worked on forecasting ground
+      magnetic perturbations with deep learning. Before that I studied physics at Universidad
+      de Chile.
+    - >-
+      I am an Associate Editor of Space Weather (AGU/Wiley), have served on NASA review panels,
+      and often talk to the press about space weather, auroras and space exploration.
+  # Third person, for event organisers and journalists (copy-paste ready).
+  press: >-
+    Victor Pinto es físico espacial y Profesor Asistente del Departamento de Física de la
+    Universidad de Santiago de Chile (USACH), donde es Subdirector de Docencia y co-dirige el
+    grupo de investigación HelioUSACH. Doctor en Ciencias Atmosféricas y Oceánicas por UCLA
+    (2019) y ex investigador postdoctoral de la University of New Hampshire, investiga los
+    cinturones de radiación de la Tierra, las tormentas geomagnéticas y el uso de machine
+    learning para predecir el clima espacial. Es editor asociado de la revista Space Weather (AGU).
+  press_en: >-
+    Victor Pinto is a space physicist and Assistant Professor in the Department of Physics at
+    Universidad de Santiago de Chile (USACH), where he is Associate Chair for Teaching and
+    co-leads the HelioUSACH research group. He holds a Ph.D. in Atmospheric and Oceanic Sciences
+    from UCLA (2019) and was a postdoctoral researcher at the University of New Hampshire. His
+    research covers Earth's radiation belts, geomagnetic storms and machine learning for space
+    weather prediction. He is an Associate Editor of the journal Space Weather (AGU).
+
+supervision: >-
+  Dirijo y co-dirijo tesis de pregrado (Ingeniería Física, Ingeniería en Astrofísica) y de
+  magíster (USACH y Universidad de Chile), y patrocino investigadoras postdoctorales. Los
+  estudiantes y postdocs aparecen en la página del equipo de HelioUSACH.
+supervision_en: >-
+  I advise and co-advise undergraduate theses (Physics Engineering, Astrophysics Engineering)
+  and master's theses (USACH and Universidad de Chile), and sponsor postdoctoral researchers.
+  Students and postdocs are listed on the HelioUSACH team page.
+
+outreach: >-
+  Además de la prensa, he dictado talleres de clima espacial en la Escuela de Invierno de la
+  Facultad de Ciencia (2023 y 2024), charlas en colegios de Santiago y Maipú, y he patrocinado
+  proyectos estudiantiles de vinculación con el medio.
+outreach_en: >-
+  Besides press work, I have taught space weather workshops at the Faculty of Science Winter
+  School (2023 and 2024), given talks at schools in Santiago and Maipú, and sponsored student
+  outreach projects.
+
+contact:
+  email: victor.pinto@usach.cl
+  address: Departamento de Física, Universidad de Santiago de Chile, Estación Central, Santiago, Chile
+  address_en: Department of Physics, Universidad de Santiago de Chile, Estación Central, Santiago, Chile
+  # office: e.g. "Oficina 123" — optional, shown when present
+  press: Para entrevistas sobre clima espacial, auroras o exploración espacial, escríbeme por correo.
+  press_en: For interviews on space weather, auroras or space exploration, please email me.
+  students: ¿Te interesa hacer una tesis en heliofísica? Revisa la convocatoria del grupo.
+  students_en: Interested in a thesis in heliophysics? See the group's open call.
+  studentsUrl: https://heliousach.github.io/#contact
+
+profiles:
+  - { label: Google Scholar, url: "https://scholar.google.com/citations?user=nEqGWqoAAAAJ" }
+  - { label: ORCID, url: "https://orcid.org/0000-0003-1210-167X" }
+  - { label: ResearchGate, url: "https://www.researchgate.net/profile/Victor-Pinto-9" }
+  - { label: GitHub, url: "https://github.com/vpinto-space" }
+  - { label: LinkedIn, url: "https://www.linkedin.com/in/victor-a-pinto" }
+  - { label: X, url: "https://twitter.com/vpintoa" }
+
+# CV PDFs (generated by scripts/build-cv.py from src/data). Paths inside public/.
+cv:
+  es: /cv/victor-pinto-cv-es.pdf
+  en: /cv/victor-pinto-cv-en.pdf
+  updated: 2026-09-27
