@@ -1,0 +1,77 @@
+# Education, positions and awards. Used by the About page and the CV PDF.
+# Newest first. Fields ending in _en = English (optional, falls back to Spanish).
+# Source: tenure dossier §1, §2, §5.5 (checked 2026-09-27).
+
+education:
+  - year: "2019"
+    degree: Ph.D. en Ciencias Atmosféricas y Oceánicas (física espacial)
+    degree_en: Ph.D. in Atmospheric and Oceanic Sciences (space physics)
+    institution: University of California, Los Angeles (UCLA)
+    detail: "Co-directores: Larry Lyons y Jacob Bortnik"
+    detail_en: "Co-advisors: Larry Lyons and Jacob Bortnik"
+  - year: "2014"
+    degree: M.S. en Ciencias Atmosféricas y Oceánicas
+    degree_en: M.S. in Atmospheric and Oceanic Sciences
+    institution: UCLA
+  - year: "2011"
+    degree: Magíster en Ciencias, mención Física (distinción máxima)
+    degree_en: M.Sc. in Physics (highest distinction)
+    institution: Universidad de Chile
+    detail: "Directores: Alejandro Valdivia y Marina Stepanova"
+    detail_en: "Advisors: Alejandro Valdivia and Marina Stepanova"
+  - year: "2006"
+    degree: Licenciatura en Ciencias, mención Física
+    degree_en: B.Sc. in Physics
+    institution: Universidad de Chile
+
+positions:
+  - years: 2022–
+    title: Profesor Asistente
+    title_en: Assistant Professor
+    institution: Departamento de Física, Universidad de Santiago de Chile (USACH)
+    institution_en: Department of Physics, Universidad de Santiago de Chile (USACH)
+    detail: Subdirector de Docencia desde agosto de 2025
+    detail_en: Associate Chair for Teaching since August 2025
+  - years: 2020–2022
+    title: Investigador postdoctoral
+    title_en: Postdoctoral Research Associate
+    institution: Space Science Center, University of New Hampshire
+  - years: 2015–2019
+    title: Teaching Assistant, Associate y Fellow; Graduate Student Researcher (2017–2019)
+    title_en: Teaching Assistant, Associate and Fellow; Graduate Student Researcher (2017–2019)
+    institution: Department of Atmospheric and Oceanic Sciences, UCLA
+  - years: 2014, 2016
+    title: Investigador visitante
+    title_en: Visiting researcher
+    institution: NASA Goddard Space Flight Center
+  - years: "2011"
+    title: Expedición Científica Antártica N°47
+    title_en: Chilean Antarctic Scientific Expedition 47
+    institution: INACH
+    detail: Reemplazo y calibración de magnetómetros en las bases Escudero y O'Higgins
+    detail_en: Replaced and calibrated magnetometers at Escudero and O'Higgins bases
+  - years: 2010–2011
+    title: Académico (instructor)
+    title_en: Instructor
+    institution: Universidad Católica del Maule; Universidad de Valparaíso
+
+awards:
+  - year: "2023"
+    title: Artículo más leído de 2021, Space Weather
+    title_en: Most read paper of 2021, Space Weather
+    detail: «Geomagnetic storm occurrence and their relation with solar cycle phases»
+    detail_en: "“Geomagnetic storm occurrence and their relation with solar cycle phases”"
+  - year: "2018"
+    title: AGU Outstanding Student Paper Award (AGU Fall Meeting 2017)
+    detail: «Spatial characterization of relativistic electron events in the Earth's outer radiation belt»
+    detail_en: "“Spatial characterization of relativistic electron events in the Earth's outer radiation belt”"
+  - year: "2018"
+    title: Top 100 Physics Papers 2017, Scientific Reports
+    detail: «What is the temperature of a moving body?»
+    detail_en: "“What is the temperature of a moving body?”"
+  - year: "2011"
+    title: Beca Becas Chile de doctorado en el extranjero (CONICYT)
+    title_en: Becas Chile doctoral fellowship (CONICYT)
+  - year: "2009"
+    title: Apoyo a tesis en temas antárticos (INACH)
+    title_en: Thesis support in Antarctic topics (INACH)

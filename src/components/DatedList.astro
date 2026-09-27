@@ -1,0 +1,19 @@
+---
+// One list style for everything dated: talks, media, service, positions.
+// items: { date (already formatted), title, sub?, note?, href? }
+interface Item { date: string; title: string; sub?: string; note?: string; href?: string }
+interface Props { items: Item[]; compact?: boolean }
+const { items, compact = false } = Astro.props;
+---
+<ul class:list={['dated', { 'dated-compact': compact }]}>
+  {items.map((it) => (
+    <li>
+      <span class="dated-date">{it.date}</span>
+      <div>
+        <p class="dated-title">{it.href ? <a href={it.href} target="_blank" rel="noopener">{it.title}</a> : it.title}</p>
+        {it.sub && <p class="dated-sub">{it.sub}</p>}
+        {it.note && <p class="dated-note">{it.note}</p>}
+      </div>
+    </li>
+  ))}
+</ul>

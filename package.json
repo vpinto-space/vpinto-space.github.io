@@ -5,10 +5,18 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "cv": "astro build && python scripts/build-cv.py && astro build"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
-    "astro": "^7.3.5"
+    "astro": "^7.3.5",
+    "js-yaml": "^5.4.2"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }

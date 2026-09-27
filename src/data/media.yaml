@@ -1,0 +1,163 @@
+# Media appearances (press, TV, radio, podcasts). Newest first is automatic.
+#
+# date: "YYYY-MM" (or "YYYY" when the month is unknown)
+# outlet: outlet name(s) as published — one line
+# topic / topic_en: what it was about (topic_en optional, falls back to Spanish)
+# url: optional link to the piece
+# featured: true -> can appear on the home page (the 4 newest featured items are shown)
+#
+# Rule: actions, not numbers. Don't write "~10 appearances"; list the outlets instead.
+
+- id: 2026-04-artemis-canal13
+  date: "2026-04"
+  outlet: Canal 13
+  topic: Lanzamiento de Artemis II y su trayectoria lunar
+  topic_en: Artemis II launch and lunar trajectory
+  featured: true
+
+- id: 2026-04-artemis-radio-usach
+  date: "2026-04"
+  outlet: Radio USACH, «Línea Uno»
+  topic: La misión Artemis II
+  topic_en: The Artemis II mission
+
+- id: 2026-04-artemis-ivoox
+  date: "2026-04"
+  outlet: ivoox (podcast)
+  topic: «Las múltiples miradas del sobrevuelo lunar de ARTEMIS»
+  topic_en: "“Las múltiples miradas del sobrevuelo lunar de ARTEMIS” (in Spanish)"
+
+- id: 2026-04-artemis-youtube-usach
+  date: "2026-04"
+  outlet: YouTube USACH
+  topic: El viaje a la Luna
+  topic_en: The trip to the Moon
+
+- id: 2025-12-fondef-platform
+  date: "2025-12"
+  outlet: Diario Usach, Cooperativa Ciencia, Crónica Digital, Mundo en Línea, Tu Opinas
+  topic: Lanzamiento de la primera plataforma chilena de meteorología espacial (FONDEF)
+  topic_en: Launch of Chile's first space weather platform (FONDEF)
+  featured: true
+
+- id: 2025-12-la-segunda-auroras
+  date: "2025-12"
+  outlet: La Segunda
+  topic: Destinos para observar auroras
+  topic_en: Where to watch auroras
+
+- id: 2025-11-auroras-sur
+  date: "2025-11"
+  outlet: Radio Bío-Bío (entrevista), BioBioChile, El Mercurio, Diario Usach, Diario Chiloé, Diario de Puerto Montt, Diario Palena, Página 7, Media Banco
+  topic: Auroras australes de tonalidad morada en el sur de Chile
+  topic_en: Purple-toned southern auroras seen in southern Chile
+  featured: true
+
+- id: 2025-10-mega-saa
+  date: "2025-10"
+  outlet: Mega
+  topic: Debilitamiento del campo magnético terrestre en el Atlántico Sur
+  topic_en: Weakening of Earth's magnetic field over the South Atlantic
+  featured: true
+
+- id: 2025-09-lun-astronautas
+  date: "2025-09"
+  outlet: Las Últimas Noticias
+  topic: Envejecimiento de astronautas en el espacio
+  topic_en: How astronauts age in space
+
+- id: 2025-08-mega-basura
+  date: "2025-08"
+  outlet: Mega (reportaje)
+  topic: Los riesgos de la basura espacial
+  topic_en: The risks of space debris
+
+- id: 2025-04-lun-campo
+  date: "2025-04"
+  outlet: Las Últimas Noticias
+  topic: Debilitamiento del campo magnético y sus efectos
+  topic_en: The weakening magnetic field and its effects
+
+- id: 2025-03-canal13-starship
+  date: "2025-03"
+  outlet: Canal 13
+  topic: Explosión del cohete Starship
+  topic_en: Starship rocket explosion
+
+- id: 2025-foro-ciudadano
+  date: "2025"
+  outlet: Foro Ciudadano (podcast)
+  topic: Apertura del Centro Espacial Nacional en Cerrillos
+  topic_en: Opening of the National Space Center in Cerrillos
+
+- id: 2025-fidae
+  date: "2025"
+  outlet: FIDAE Space Summit
+  topic: Estado de la exploración espacial en Chile
+  topic_en: The state of space exploration in Chile
+
+- id: 2024-10-lun-aurora
+  date: "2024-10"
+  outlet: Las Últimas Noticias
+  topic: Fotografía de aurora austral en Punta Arenas
+  topic_en: Southern aurora photographed in Punta Arenas
+
+- id: 2024-10-ciencia-en-chile
+  date: "2024-10"
+  outlet: Ciencia en Chile
+  topic: Académicos de USACH y UnB colaboran en ciencias espaciales (AUGM/CNPq)
+  topic_en: USACH and UnB researchers collaborate on space sciences (AUGM/CNPq)
+
+- id: 2024-09-canal13-campo
+  date: "2024-09"
+  outlet: Canal 13
+  topic: Detectan un tercer campo que rodea a la Tierra; entrevista como académico del Depto. de Física
+  topic_en: A third field detected around Earth; interview as a USACH physics faculty member
+
+- id: 2024-06-chv-marte
+  date: "2024-06"
+  outlet: Chilevisión
+  topic: Hallazgo de una fosa en la superficie de Marte
+  topic_en: A pit found on the surface of Mars
+
+- id: 2024-05-tormenta-solar
+  date: "2024-05"
+  outlet: Chilevisión, Canal 13, Emol, Zona Evoluciona, Las Últimas Noticias, El Mercurio
+  topic: Tormenta solar severa y auroras australes visibles en Chile
+  topic_en: Severe solar storm and southern auroras seen from Chile
+
+- id: 2024-04-canal13-eclipse
+  date: "2024-04"
+  outlet: Canal 13
+  topic: Eclipse solar en el hemisferio norte
+  topic_en: Solar eclipse in the northern hemisphere
+
+- id: 2024-04-diario-usach
+  date: "2024-04"
+  outlet: Diario Usach
+  topic: Tormenta geomagnética que afecta a la Tierra
+  topic_en: A geomagnetic storm reaching Earth
+
+- id: 2024-01-cnn
+  date: "2024-01"
+  outlet: CNN Chile
+  topic: Las misiones espaciales de 2024
+  topic_en: The space missions of 2024
+
+- id: 2023-12-tormentas
+  date: "2023-12"
+  outlet: BioBioChile, En Cancha, Diario Usach, El Lector, Radio Allen, G5 Noticias, Media Banco, Futuro 360, El Tipógrafo, La Noticia Online
+  topic: ¿Pueden las tormentas geomagnéticas cortar la luz o internet? El ciclo solar de 11 años
+  topic_en: Can geomagnetic storms cause power or internet outages? The 11-year solar cycle
+
+- id: 2023-07-radio-usach
+  date: "2023-07"
+  outlet: Radio USACH, Stgo TV
+  topic: Actividad solar y tormentas geomagnéticas
+  topic_en: Solar activity and geomagnetic storms
+
+- id: 2023-05-prediccion-tormenta
+  date: "2023-05"
+  outlet: La Razón, 24 Horas, UChile.cl, El Mercurio, Cooperativa Ciencia
+  topic: Físicos chilenos analizan la ocurrencia de grandes tormentas geomagnéticas (artículo de Reyes, Pinto y Moya)
+  topic_en: Chilean physicists analyse when large geomagnetic storms occur (paper by Reyes, Pinto and Moya)

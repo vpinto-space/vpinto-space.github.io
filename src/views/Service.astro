@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import SectionHead from '../components/SectionHead.astro';
+import DatedList from '../components/DatedList.astro';
+import Pager from '../components/Pager.astro';
+import { ui, routes, groupBy, type Lang } from '../lib/i18n';
+import { cvFile } from '../lib/data';
+import { getService, getTalks } from '../lib/content';
+import { serviceItem, talkItem } from '../lib/format';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const groups = groupBy(await getService({ publicOnly: true }), (s) => s.group);
+const events = await getTalks('organized');
+const cvPath = cvFile(lang);
+---
+<Layout lang={lang} title={t.service.title} route="service" description={t.service.lead}>
+  <PageHeader eyebrow={t.service.eyebrow} title={t.service.title} lead={t.service.lead} back={{ href: `${routes.home[lang]}#service`, label: t.backHome }} />
+
+  <section class="band">
+    <div class="wrap two-col">
+      {groups.map(([g, items]) => (
+        <div class="group">
+          <h2 class="group-title">{t.service.groups[g]}</h2>
+          <DatedList items={items.map((s) => serviceItem(s, lang))} compact />
+        </div>
+      ))}
+      <div class="group">
+        <h2 class="group-title">{t.service.events}</h2>
+        <DatedList items={events.map((e) => talkItem(e, lang))} compact />
+      </div>
+    </div>
+    <p class="wrap meta section-foot">{cvPath ? <a href={cvPath} download>{t.service.cvNote}</a> : t.service.cvNote}</p>
+  </section>
+  <Pager lang={lang} current="service" />
+</Layout>

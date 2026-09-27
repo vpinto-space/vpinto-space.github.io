@@ -1,0 +1,169 @@
+# Talks and events. Newest first is automatic.
+#
+# kind:  invited   -> invited talk or seminar
+#        contributed -> talk or poster I presented (selected, first author)
+#        organized -> event I helped organise (also listed on the Service page)
+# date: "YYYY-MM"
+# title: talk title as given (English or Spanish, no translation needed); optional for organized events
+# event / event_en: event name; place: city, country
+# role / role_en: for organized events (e.g. "Comité organizador")
+# format: poster (optional; default is a talk)
+#
+# Rule: only activities verified in the tenure dossier. Unconfirmed items stay out
+# (e.g. EGU 2026 until the presentation is confirmed).
+
+# ---------- invited ----------
+- id: 2026-08-inpe-solarai
+  kind: invited
+  date: "2026-08"
+  event: GSST/CBERS-5 SolarAI Symposium on Machine Learning in Heliophysics and Space Weather
+  place: INPE, Brasil
+  place_en: INPE, Brazil
+
+- id: 2022-11-seminario-usach
+  kind: invited
+  date: "2022-11"
+  title: Predicting GICs using machine learning
+  event: Seminario General, Departamento de Física USACH
+  event_en: Physics Department Colloquium, USACH
+  place: Santiago, Chile
+
+- id: 2022-11-isss-inpe
+  kind: invited
+  date: "2022-11"
+  title: The Earth's radiation belts
+  event: International Space Science School (ISSS)
+  place: INPE, Brasil
+  place_en: INPE, Brazil
+
+- id: 2020-12-agu-invited
+  kind: invited
+  date: "2020-12"
+  title: Recent results on the understanding of Earth's double outer radiation belt events and remnant belt confinement
+  event: AGU Fall Meeting
+  place: Virtual
+
+- id: 2020-09-unh-postdoc-week
+  kind: invited
+  date: "2020-09"
+  title: Forecasting geomagnetically induced currents at mid-latitudes using machine learning
+  event: UNH Postdoctoral Appreciation Week
+  place: Virtual
+
+# ---------- contributed (selected, as presenting author) ----------
+- id: 2025-12-plasmas
+  kind: contributed
+  date: "2025-12"
+  event: II Congreso Chileno de Plasmas
+  event_en: II Chilean Plasma Physics Congress
+  place: Chile
+
+- id: 2025-08-instrumentacion
+  kind: contributed
+  date: "2025-08"
+  event: III Workshop de Instrumentación en Geociencias
+  event_en: III Workshop on Instrumentation in Geosciences
+  place: Chillán, Chile
+
+- id: 2025-01-lawpp
+  kind: contributed
+  date: "2025-01"
+  title: Analysis of solar wind properties associated with relativistic electron enhancement events at geostationary orbit
+  event: 17th Latin American Workshop on Plasma Physics
+  place: Santiago, Chile
+
+- id: 2024-12-agu
+  kind: contributed
+  format: poster
+  date: "2024-12"
+  title: "Evaluation of gap-filling for OMNI data: how much data is it safe to interpolate?"
+  event: AGU Annual Meeting
+  place: Washington, D.C., EE.UU.
+  place_en: Washington, D.C., USA
+
+- id: 2024-04-colage
+  kind: contributed
+  date: "2024-04"
+  title: Forecasting ground magnetic field maximum perturbations in near-real time with deep learning models
+  event: XIV Conferencia Latinoamericana de Geofísica Espacial (COLAGE)
+  place: Monterrey, México
+  place_en: Monterrey, Mexico
+
+- id: 2023-12-agu
+  kind: contributed
+  format: poster
+  date: "2023-12"
+  title: Forecasting 1-hour ahead ground magnetic field maximum perturbations with deep learning models
+  event: AGU Fall Meeting
+  place: San Francisco, EE.UU.
+  place_en: San Francisco, USA
+
+- id: 2022-12-agu
+  kind: contributed
+  format: poster
+  date: "2022-12"
+  title: Forecasting ground magnetic perturbations at high and mid-latitudes using deep learning and near real-time solar wind data
+  event: AGU Fall Meeting
+  place: Chicago, EE.UU.
+  place_en: Chicago, USA
+
+- id: 2022-11-colage
+  kind: contributed
+  date: "2022-11"
+  title: Forecasting ground magnetic perturbations using deep learning and near real-time data
+  event: XIII Conferencia Latinoamericana de Geofísica Espacial (COLAGE)
+  place: INPE, Brasil
+  place_en: INPE, Brazil
+
+- id: 2022-01-ams
+  kind: contributed
+  date: "2022-01"
+  title: Evaluating near real-time ground magnetic field perturbations predictions using machine learning models
+  event: AMS Annual Meeting
+  place: Houston, EE.UU.
+  place_en: Houston, USA
+
+# ---------- organized ----------
+- id: 2026-06-igs-workshop
+  kind: organized
+  date: "2026-06"
+  event: IGS Workshop 2026 (International GNSS Service)
+  place: Santiago, Chile
+  role: Comité organizador y chair de sesión
+  role_en: Organizing committee and session chair
+
+- id: 2025-08-instrumentacion-org
+  kind: organized
+  date: "2025-08"
+  event: III Workshop de Instrumentación en Geociencias
+  event_en: III Workshop on Instrumentation in Geosciences
+  place: Chillán, Chile
+  role: Co-organizador
+  role_en: Co-organizer
+
+- id: 2023-09-jornadas-postgrado
+  kind: organized
+  date: "2023-09"
+  event: Jornadas de Postgrado en Física, USACH
+  event_en: Physics Graduate Research Days, USACH
+  place: Santiago, Chile
+  role: Comité organizador
+  role_en: Organizing committee
+
+- id: 2023-05-instrumentacion-org
+  kind: organized
+  date: "2023-05"
+  event: II Workshop de Instrumentación en Geociencias
+  event_en: II Workshop on Instrumentation in Geosciences
+  place: Santiago, Chile
+  role: Organizador
+  role_en: Organizer
+
+- id: 2022-01-ams-session
+  kind: organized
+  date: "2022-01"
+  event: AMS Annual Meeting
+  place: Houston, EE.UU.
+  place_en: Houston, USA
+  role: Proponente y chair de sesión
+  role_en: Session proposer and chair

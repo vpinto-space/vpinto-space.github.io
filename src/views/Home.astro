@@ -1,0 +1,132 @@
+---
+// The home page is the whole site in one scroll. Each section summarises a
+// detail page ("See full page") and is a nav target (id + data-section).
+import Layout from '../layouts/Layout.astro';
+import SectionHead from '../components/SectionHead.astro';
+import Portrait from '../components/Portrait.astro';
+import CvButtons from '../components/CvButtons.astro';
+import ProfileLinks from '../components/ProfileLinks.astro';
+import PubList from '../components/PubList.astro';
+import DatedList from '../components/DatedList.astro';
+import FundingList from '../components/FundingList.astro';
+import { ui, routes, pick, type Lang } from '../lib/i18n';
+import { site, research } from '../lib/data';
+import { getPublications, getTalks, getMedia, getCourses, getService } from '../lib/content';
+import { talkItem, mediaItem, serviceItem } from '../lib/format';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const full = (href: string) => ({ href, label: t.fullPage });
+
+const selected = (await getPublications()).filter((p) => p.selected);
+const invited = (await getTalks('invited')).slice(0, 4);
+const media = (await getMedia()).filter((m) => m.featured).slice(0, 4);
+const current = (await getCourses()).filter((c) => c.semesters.includes(site.currentSemester));
+const highlights = (await getService({ publicOnly: true })).filter((s) => s.highlight);
+---
+<Layout lang={lang} title={t.nav.home} route="home">
+  <section class="intro" id="top">
+    <div class="wrap intro-grid">
+      <Portrait lang={lang} />
+      <div class="intro-text">
+        <p class="eyebrow">{t.hero.eyebrow}</p>
+        <h1 class="display">{site.name}</h1>
+        <p class="intro-role">{pick(site, 'role', lang)}<br />{site.institution}<br /><span class="muted">{pick(site, 'admin', lang)}</span></p>
+        <ul class="affil">
+          {site.affiliations.slice(1).map((a) => <li><a href={a.url} target="_blank" rel="noopener">{pick(a, 'name', lang)}</a></li>)}
+        </ul>
+        <p class="intro-bio">{pick(site.bio, 'short', lang)}</p>
+        <CvButtons lang={lang}>
+          <a class="btn btn-quiet" href={routes.about[lang]}>{t.moreAbout}</a>
+        </CvButtons>
+        <ProfileLinks class="profiles-inline" />
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-alt" id="research" data-section="research">
+    <div class="wrap">
+      <SectionHead eyebrow={t.research.eyebrow} title={t.research.homeTitle} more={full(routes.research[lang])} />
+      <div class="split">
+        <div>
+          <p class="lead">{pick(research, 'intro', lang)}</p>
+          <ul class="themes">
+            {research.themes.map((th) => <li>{pick(th, 'title', lang)}</li>)}
+          </ul>
+        </div>
+        <div>
+          <h3 class="subhead">{t.research.leadRoles}</h3>
+          <FundingList lang={lang} leadOnly />
+          <p class="section-foot"><a class="more" href={`${routes.research[lang]}#funding`}>{t.research.allRoles}</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="publications" data-section="publications">
+    <div class="wrap">
+      <SectionHead eyebrow={t.pubs.eyebrow} title={t.pubs.selected} more={full(routes.publications[lang])} />
+      <PubList pubs={selected} lang={lang} />
+    </div>
+  </section>
+
+  <section class="band band-alt" id="talks" data-section="talks">
+    <div class="wrap">
+      <SectionHead eyebrow={t.talks.eyebrow} title={t.talks.latest} more={full(routes.talks[lang])} />
+      <DatedList items={invited.map((x) => talkItem(x, lang))} />
+    </div>
+  </section>
+
+  <section class="band" id="teaching" data-section="teaching">
+    <div class="wrap">
+      <SectionHead eyebrow={t.teaching.eyebrow} title={t.teaching.homeTitle} more={full(routes.teaching[lang])} />
+      <div class="split">
+        <div>
+          <h3 class="subhead">{t.teaching.current} ({site.currentSemester})</h3>
+          <ul class="plain-list">
+            {current.map((c) => <li><strong>{pick(c, 'title', lang)}</strong> <span class="muted">· {t.teaching.levels[c.level]}</span></li>)}
+          </ul>
+        </div>
+        <div>
+          <h3 class="subhead">{t.teaching.supervision}</h3>
+          <p class="muted">{pick(site, 'supervision', lang)}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-alt" id="service" data-section="service">
+    <div class="wrap">
+      <SectionHead eyebrow={t.service.eyebrow} title={t.service.highlights} more={full(routes.service[lang])} />
+      <DatedList items={highlights.map((s) => serviceItem(s, lang))} />
+    </div>
+  </section>
+
+  <section class="band" id="media" data-section="media">
+    <div class="wrap">
+      <SectionHead eyebrow={t.media.eyebrow} title={t.media.latest} more={full(routes.media[lang])} />
+      <DatedList items={media.map((m) => mediaItem(m, lang))} />
+    </div>
+  </section>
+
+  <section class="band band-alt" id="contact" data-section="contact">
+    <div class="wrap">
+      <SectionHead eyebrow={t.contact.eyebrow} title={t.contact.homeTitle} />
+      <div class="contact-grid">
+        <div class="contact-card">
+          <a class="email" href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+          <p class="muted">{pick(site.contact, 'address', lang)}</p>
+          {site.contact.office && <p class="muted">{t.contact.office}: {site.contact.office}</p>}
+          <ProfileLinks class="profiles-inline" />
+        </div>
+        <dl class="contact-notes">
+          <dt>{t.contact.press}</dt>
+          <dd>{pick(site.contact, 'press', lang)}</dd>
+          <dt>{t.contact.students}</dt>
+          <dd><a href={site.contact.studentsUrl} target="_blank" rel="noopener">{pick(site.contact, 'students', lang)}</a></dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</Layout>

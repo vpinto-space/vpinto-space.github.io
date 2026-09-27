@@ -1,0 +1,48 @@
+# Courses taught at USACH. One entry per course (and level).
+# semesters: list of "YYYY-1" / "YYYY-2". A course is shown as "current" when its
+# semesters include `currentSemester` from site.yaml.
+# level: pregrado | postgrado | doctorado
+
+- id: heliosfera-pregrado
+  title: Introducción a la Física de la Heliosfera
+  title_en: Introduction to Heliospheric Physics
+  level: pregrado
+  program: Astrofísica
+  program_en: Astrophysics
+  semesters: ["2024-1", "2025-1", "2025-2", "2026-1"]
+
+- id: heliosfera-postgrado
+  title: Introducción a la Física de la Heliosfera
+  title_en: Introduction to Heliospheric Physics
+  level: postgrado
+  semesters: ["2024-1", "2026-1"]
+
+- id: electromagnetismo
+  title: Electromagnetismo
+  title_en: Electromagnetism
+  level: pregrado
+  semesters: ["2023-2", "2024-2", "2025-2", "2026-2"]
+
+- id: laboratorio-avanzado
+  title: Laboratorio Avanzado
+  title_en: Advanced Laboratory
+  level: pregrado
+  semesters: ["2023-1", "2026-2"]
+
+- id: fisica-computacional
+  title: Física Computacional II y III
+  title_en: Computational Physics II and III
+  level: pregrado
+  semesters: ["2023-1", "2023-2"]
+
+- id: instrumentacion-astronomica
+  title: Instrumentación Astronómica (curso compartido)
+  title_en: Astronomical Instrumentation (co-taught)
+  level: pregrado
+  semesters: ["2025-1"]
+
+- id: topico-datos
+  title: "Tópico I: Procesamiento y análisis de datos para ciencias espaciales y geociencias"
+  title_en: "Topics I: Data processing and analysis for space sciences and geosciences"
+  level: doctorado
+  semesters: ["2022-2"]

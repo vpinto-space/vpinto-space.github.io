@@ -1,0 +1,111 @@
+# Research summary, themes and my roles in funded projects.
+# Project details (images, teams, descriptions) live on HelioUSACH; here only MY role.
+# Never list projects under evaluation, and never internal grant IDs.
+
+intro: >-
+  Estudio cómo el viento solar controla la dinámica de los cinturones de radiación de la Tierra:
+  cuándo y por qué los electrones relativistas se aceleran, se transportan o se pierden. Combino
+  datos de satélites (Van Allen Probes, THEMIS, GOES) y magnetómetros en tierra con modelos de
+  machine learning para predecir perturbaciones geomagnéticas y corrientes inducidas (GIC).
+intro_en: >-
+  I study how the solar wind controls the dynamics of Earth's radiation belts: when and why
+  relativistic electrons are accelerated, transported or lost. I combine satellite data
+  (Van Allen Probes, THEMIS, GOES) and ground magnetometers with machine learning models to
+  forecast geomagnetic perturbations and geomagnetically induced currents (GIC).
+
+themes:
+  - title: Cinturones de radiación y electrones relativistas
+    title_en: Radiation belts and relativistic electrons
+    text: Aumentos y dropouts en el cinturón externo; formación, confinamiento y decaimiento de cinturones remanentes ultrarelativistas; respuesta radial de los electrones ante perturbaciones geomagnéticas.
+    text_en: Enhancements and dropouts in the outer belt; formation, confinement and decay of ultrarelativistic remnant belts; radial response of electrons to geomagnetic disturbances.
+  - title: Ondas ULF y turbulencia magnetosférica
+    title_en: ULF waves and magnetospheric turbulence
+    text: Relación entre la potencia de ondas ULF y los flujos de electrones relativistas; turbulencia y balance de presión en la magnetosfera dinámica.
+    text_en: How ULF wave power relates to relativistic electron fluxes; turbulence and pressure balance in the dynamic magnetosphere.
+  - title: Machine learning para clima espacial
+    title_en: Machine learning for space weather
+    text: Predicción de perturbaciones magnéticas en tierra y GIC con redes neuronales profundas, pronóstico probabilístico y técnicas de explicabilidad.
+    text_en: Forecasting ground magnetic perturbations and GIC with deep neural networks, probabilistic forecasting and explainability techniques.
+  - title: Acoplamiento viento solar–magnetosfera
+    title_en: Solar wind–magnetosphere coupling
+    text: Influencia del viento solar en la magnetosfera interna y efectos de las tormentas geomagnéticas en la tecnología.
+    text_en: Solar wind control of the inner magnetosphere and the effects of geomagnetic storms on technology.
+
+# role: pi | director | coi | collaborator | sponsor ; status: active | completed
+funding:
+  - grant: FONDECYT de Iniciación
+    grant_en: FONDECYT Initiation grant
+    funder: ANID
+    years: 2025–2028
+    role: pi
+    topic: Ondas ULF y partículas atrapadas en los cinturones de radiación
+    topic_en: ULF waves and trapped particles in the radiation belts
+    status: active
+  - grant: FONDEF IDEA I+D
+    funder: ANID
+    years: 2025–2027
+    role: pi
+    roleNote: Investigador principal por USACH; dirigido por la Universidad Adventista de Chile
+    roleNote_en: Principal investigator for USACH; led by Universidad Adventista de Chile
+    topic: Plataforma piloto de clima espacial para Chile
+    topic_en: Pilot space weather platform for Chile
+    status: active
+  - grant: FONDEQUIP
+    funder: ANID
+    years: 2023–
+    role: director
+    topic: Plataforma de cómputo de alto rendimiento (HPC) del Departamento de Física
+    topic_en: High-performance computing (HPC) platform, Department of Physics
+    status: active
+  - grant: FONDECYT Regular
+    funder: ANID
+    years: 2025–2029
+    role: coi
+    roleNote: "Investigadora responsable: M. Stepanova"
+    roleNote_en: "PI: M. Stepanova"
+    topic: Turbulencia y balance de presión en la magnetosfera
+    topic_en: Turbulence and pressure balance in the magnetosphere
+    status: active
+  - grant: FONDECYT Regular
+    funder: ANID
+    years: 2024–2028
+    role: coi
+    roleNote: "Investigador responsable: P. S. Moya"
+    roleNote_en: "PI: P. S. Moya"
+    topic: Física de plasmas en expansión (viento solar y estelar)
+    topic_en: Physics of expanding plasmas (solar and stellar winds)
+    status: active
+  - grant: CNPq (Brasil)
+    grant_en: CNPq (Brazil)
+    funder: CNPq
+    years: 2025–2029
+    role: coi
+    roleNote: "Investigador responsable: J. P. Marchezi (INPE)"
+    roleNote_en: "PI: J. P. Marchezi (INPE)"
+    topic: GIC en Brasil y precipitación en la Anomalía del Atlántico Sur
+    topic_en: GIC in Brazil and precipitation in the South Atlantic Anomaly
+    status: active
+  - grant: NASA Living With a Star
+    funder: NASA
+    years: 2023–2027
+    role: collaborator
+    roleNote: "PI: J. Liu (UCLA)"
+    topic: Impacto de transientes del foreshock en la magnetosfera
+    topic_en: Foreshock transients and magnetospheric perturbations
+    status: active
+  - grant: Inserción a la Academia
+    grant_en: Academic Insertion grant
+    funder: ANID
+    years: 2022–2025
+    role: pi
+    status: completed
+  - grant: DICYT Regular
+    funder: USACH
+    years: 2024–2025
+    role: pi
+    status: completed
+  - grant: DICYT Juventud Investigadora
+    funder: USACH
+    years: "2024"
+    role: pi
+    status: completed

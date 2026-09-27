@@ -1,0 +1,19 @@
+---
+// My role in funded projects (research.yaml). Project details live on HelioUSACH.
+import { research } from '../lib/data';
+import { ui, pick, type Lang } from '../lib/i18n';
+interface Props { lang: Lang; status?: 'active' | 'completed'; /** only roles where I lead (PI, director) */ leadOnly?: boolean }
+const { lang, status = 'active', leadOnly = false } = Astro.props;
+const t = ui[lang];
+const items = research.funding.filter((f) => f.status === status && (!leadOnly || ['pi', 'director'].includes(f.role)));
+---
+<ul class="funding">
+  {items.map((f) => (
+    <li>
+      <p class="funding-role">{t.research.roles[f.role]}</p>
+      <p class="funding-grant"><strong>{pick(f, 'grant', lang)}</strong> <span class="muted">· {f.funder} · {f.years}</span></p>
+      {f.topic && <p class="funding-topic">{pick(f, 'topic', lang)}</p>}
+      {f.roleNote && <p class="funding-note">{pick(f, 'roleNote', lang)}</p>}
+    </li>
+  ))}
+</ul>

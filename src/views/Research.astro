@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import SectionHead from '../components/SectionHead.astro';
+import FundingList from '../components/FundingList.astro';
+import Pager from '../components/Pager.astro';
+import { ui, routes, pick, type Lang } from '../lib/i18n';
+import { research, site } from '../lib/data';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const group = site.affiliations.find((a) => a.short === 'HelioUSACH')!;
+const groupUrl = lang === 'en' ? `${group.url}/en/research/` : `${group.url}/investigacion/`;
+---
+<Layout lang={lang} title={t.research.title} route="research" description={pick(research, 'intro', lang)}>
+  <PageHeader eyebrow={t.research.eyebrow} title={t.research.title} lead={pick(research, 'intro', lang)} back={{ href: `${routes.home[lang]}#research`, label: t.backHome }} />
+
+  <section class="band">
+    <div class="wrap">
+      <SectionHead title={t.research.themes} />
+      <div class="grid grid-2">
+        {research.themes.map((th) => (
+          <article class="card"><div class="card-body">
+            <h3>{pick(th, 'title', lang)}</h3>
+            <p>{pick(th, 'text', lang)}</p>
+          </div></article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-alt" id="funding">
+    <div class="wrap">
+      <SectionHead title={t.research.funding} text={t.research.fundingLead} more={{ href: groupUrl, label: t.research.groupLink }} />
+      <h3 class="subhead">{t.research.active}</h3>
+      <FundingList lang={lang} status="active" />
+      <h3 class="subhead spaced">{t.research.completed}</h3>
+      <FundingList lang={lang} status="completed" />
+    </div>
+  </section>
+  <Pager lang={lang} current="research" />
+</Layout>

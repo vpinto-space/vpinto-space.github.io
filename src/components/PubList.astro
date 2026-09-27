@@ -1,0 +1,21 @@
+---
+// Publication list — same style on the home page, the publications page and the CV.
+import { inlineMd, ui, type Lang } from '../lib/i18n';
+interface Props { pubs: Record<string, any>[]; lang: Lang; showYear?: boolean }
+const { pubs, lang, showYear = true } = Astro.props;
+const t = ui[lang];
+---
+<ol class:list={['pubs', { 'pubs-noyear': !showYear }]}>
+  {pubs.map((p) => (
+    <li class="pub">
+      {showYear && <span class="pub-year">{p.year}</span>}
+      <div>
+        <p class="pub-title">{p.doi ? <a href={p.doi} target="_blank" rel="noopener">{p.title}</a> : p.title}</p>
+        <p class="pub-authors" set:html={inlineMd(p.authors)} />
+        <p class="pub-meta">
+          <em>{p.journal}</em>{p.details && `, ${p.details}`}{!showYear && ` (${p.year})`}{p.inPress && <span class="flag">{t.pubs.inPress}</span>}
+        </p>
+      </div>
+    </li>
+  ))}
+</ol>

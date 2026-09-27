@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import SectionHead from '../components/SectionHead.astro';
+import DatedList from '../components/DatedList.astro';
+import Pager from '../components/Pager.astro';
+import { ui, routes, pick, groupBy, type Lang } from '../lib/i18n';
+import { site } from '../lib/data';
+import { getMedia } from '../lib/content';
+import { mediaItem } from '../lib/format';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const years = groupBy(await getMedia(), (m) => m.date.slice(0, 4));
+---
+<Layout lang={lang} title={t.media.title} route="media" description={t.media.lead}>
+  <PageHeader eyebrow={t.media.eyebrow} title={t.media.title} lead={t.media.lead} back={{ href: `${routes.home[lang]}#media`, label: t.backHome }} />
+  <section class="band">
+    <div class="wrap">
+      {years.map(([y, items]) => (
+        <div class="group">
+          <h2 class="group-title">{y}</h2>
+          <DatedList items={items.map((m) => mediaItem(m, lang))} />
+        </div>
+      ))}
+    </div>
+  </section>
+  <section class="band band-alt" id="outreach">
+    <div class="wrap">
+      <SectionHead title={t.media.outreach} />
+      <p class="lead">{pick(site, 'outreach', lang)}</p>
+    </div>
+  </section>
+  <Pager lang={lang} current="media" />
+</Layout>

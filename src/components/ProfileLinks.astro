@@ -1,0 +1,8 @@
+---
+import { site } from '../lib/data';
+interface Props { class?: string }
+const { class: cls } = Astro.props;
+---
+<ul class:list={['profiles', cls]}>
+  {site.profiles.map((p) => <li><a href={p.url} target="_blank" rel="noopener me">{p.label}</a></li>)}
+</ul>

@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import SectionHead from '../components/SectionHead.astro';
+import DatedList from '../components/DatedList.astro';
+import Pager from '../components/Pager.astro';
+import { ui, routes, pick, type Lang } from '../lib/i18n';
+import { site } from '../lib/data';
+import { getCourses, getEarlierTeaching } from '../lib/content';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const courses = await getCourses();
+const earlier = await getEarlierTeaching();
+const group = site.affiliations.find((a) => a.short === 'HelioUSACH')!;
+const teamUrl = lang === 'en' ? `${group.url}/en/team/` : `${group.url}/equipo/`;
+---
+<Layout lang={lang} title={t.teaching.title} route="teaching" description={t.teaching.lead}>
+  <PageHeader eyebrow={t.teaching.eyebrow} title={t.teaching.title} lead={t.teaching.lead} back={{ href: `${routes.home[lang]}#teaching`, label: t.backHome }} />
+
+  <section class="band">
+    <div class="wrap">
+      <SectionHead title={t.teaching.courses} />
+      <ul class="courses">
+        {courses.map((c) => (
+          <li class:list={{ current: c.semesters.includes(site.currentSemester) }}>
+            <p class="course-title">{c.url ? <a href={c.url} target="_blank" rel="noopener">{pick(c, 'title', lang)}</a> : pick(c, 'title', lang)}
+              {c.semesters.includes(site.currentSemester) && <span class="flag">{t.teaching.current}</span>}</p>
+            <p class="course-meta">{t.teaching.levels[c.level]}{c.program && ` · ${pick(c, 'program', lang)}`}</p>
+            <p class="course-sem">{c.semesters.join(' · ')}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="band band-alt" id="supervision">
+    <div class="wrap two-col">
+      <div>
+        <SectionHead title={t.teaching.supervision} more={{ href: teamUrl, label: t.teaching.teamLink }} />
+        <p class="muted">{pick(site, 'supervision', lang)}</p>
+      </div>
+      <div>
+        <SectionHead title={t.teaching.curriculum} />
+        <ul class="plain-list">{t.teaching.curriculumItems.map((x) => <li>{x}</li>)}</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <SectionHead title={t.teaching.earlier} />
+      <DatedList items={earlier.map((e) => ({ date: e.years, title: e.institution, sub: pick(e, 'role', lang), note: pick(e, 'courses', lang) }))} />
+    </div>
+  </section>
+  <Pager lang={lang} current="teaching" />
+</Layout>

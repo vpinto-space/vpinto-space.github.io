@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /cv-print/
+Disallow: /en/cv-print/
 
 Sitemap: https://victorapinto.com/sitemap-index.xml

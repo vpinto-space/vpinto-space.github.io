@@ -1,0 +1,13 @@
+---
+// Portrait slot (3:4). Shows site.yaml `portrait` when set, otherwise the
+// initials tile. Same box either way, so adding a photo never moves the layout.
+import { site } from '../lib/data';
+import { pick, type Lang } from '../lib/i18n';
+interface Props { lang: Lang; size?: 'lg' | 'sm' }
+const { lang, size = 'lg' } = Astro.props;
+---
+<figure class:list={['portrait', `portrait-${size}`]}>
+  {site.portrait
+    ? <img src={site.portrait} alt={pick(site, 'portraitAlt', lang)} width="600" height="800" />
+    : <span class="portrait-initials" aria-hidden="true">{site.initials}</span>}
+</figure>

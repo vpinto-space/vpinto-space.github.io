@@ -1,0 +1,39 @@
+# Teaching before USACH (newest first, file order kept).
+
+- id: unh
+  years: "2021"
+  institution: University of New Hampshire, Department of Physics
+  role: Profesor adjunto
+  role_en: Adjunct faculty
+  courses: PHYS 408 General Physics II (recitation)
+  courses_en: PHYS 408 General Physics II (recitation)
+
+- id: ucla
+  years: 2015–2019
+  institution: UCLA, Department of Atmospheric and Oceanic Sciences
+  role: Teaching Assistant, Associate y Fellow
+  role_en: Teaching Assistant, Associate and Fellow
+  courses: Cambio climático, contaminación del aire y del agua, cursos de ciencias atmosféricas (AOS 1, 3, 101, 102, 104)
+  courses_en: Climate change, air and water pollution, atmospheric science courses (AOS 1, 3, 101, 102, 104)
+
+- id: ucm
+  years: 2010–2011
+  institution: Universidad Católica del Maule
+  role: Académico (instructor), media jornada
+  role_en: Instructor (half-time faculty)
+  courses: Física general, física térmica, física computacional y cursos de ciencias integradas
+  courses_en: General physics, thermal physics, computational physics and integrated science courses
+
+- id: uv
+  years: 2010–2011
+  institution: Universidad de Valparaíso, Escuela de Ingeniería (Santiago)
+  role: Docente a honorarios
+  role_en: Part-time lecturer
+  courses: Física General II (cátedra y laboratorio), laboratorios de Física I y III
+  courses_en: General Physics II (lectures and lab), Physics I and III labs
+
+- id: manuel-de-salas
+  years: "2009"
+  institution: Liceo Experimental Manuel de Salas
+  role: Profesor de Física
+  role_en: Physics teacher

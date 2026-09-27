@@ -1,0 +1,125 @@
+---
+// Print view of the CV, rendered from the same data as the site. Not linked or
+// indexed: scripts/build-cv.py prints it to public/cv/*.pdf.
+// Includes the CV-only items (service with public: false, supervision,
+// thesis committees) but never phone numbers, amounts or internal grant IDs.
+import Layout from '../layouts/Layout.astro';
+import { ui, pick, inlineMd, formatYM, type Lang } from '../lib/i18n';
+import { site, cv, research } from '../lib/data';
+import { getPublications, getTalks, getCourses, getEarlierTeaching, getService, getSupervision, getCommittees, getMedia } from '../lib/content';
+import { talkItem } from '../lib/format';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const es = lang === 'es';
+const L = {
+  interests: es ? 'Intereses de investigación' : 'Research interests',
+  funding: es ? 'Proyectos de investigación' : 'Research funding',
+  articles: es ? 'Artículos en revistas con revisión por pares' : 'Peer-reviewed journal articles',
+  supervision: es ? 'Dirección de tesis y postdoctorados' : 'Thesis and postdoctoral supervision',
+  graduated: es ? 'Tituladas / graduadas' : 'Completed',
+  ongoing: es ? 'En curso' : 'In progress',
+  committees: es ? 'Comisiones de tesis (examinador)' : 'Thesis committees (examiner)',
+  media: es ? 'Divulgación y medios (selección)' : 'Outreach and media (selected)',
+  updated: es ? 'Actualizado' : 'Updated',
+  teachingUsach: es ? 'Docencia en la USACH' : 'Teaching at USACH',
+};
+const pubs = await getPublications();
+const articles = pubs.filter((p) => p.type === 'article');
+const other = pubs.filter((p) => p.type === 'other');
+const service = await getService();
+const events = await getTalks('organized');
+const sup = await getSupervision();
+const committees = await getCommittees();
+const media = (await getMedia()).filter((m) => m.featured);
+const groupOrder = ['editorial', 'panels', 'review', 'university', 'societies'] as const;
+const updated = site.cv.updated.toLocaleDateString(t.dateLocale, { year: 'numeric', month: 'long', timeZone: 'UTC' });
+---
+<Layout lang={lang} title="CV" noindex bare>
+  <article class="cv">
+    <header class="cv-head">
+      <div>
+        <h1 class="display">{site.name}</h1>
+        <p>{pick(site, 'role', lang)} · {site.institution}</p>
+        <p>{pick(site, 'admin', lang)}</p>
+      </div>
+      <div class="cv-contact">
+        <p>{site.contact.email}</p>
+        <p>{site.url.replace('https://', '')}</p>
+        <p>ORCID 0000-0003-1210-167X</p>
+      </div>
+    </header>
+
+    <section><h2>{L.interests}</h2><p>{pick(research, 'intro', lang)}</p></section>
+
+    <section><h2>{t.about.education}</h2>
+      <ul class="cv-rows">{cv.education.map((e) => <li><span>{e.year}</span><div><strong>{pick(e, 'degree', lang)}</strong>, {e.institution}{e.detail && <>. {pick(e, 'detail', lang)}</>}</div></li>)}</ul>
+    </section>
+
+    <section><h2>{t.about.positions}</h2>
+      <ul class="cv-rows">{cv.positions.map((p) => <li><span>{p.years}</span><div><strong>{pick(p, 'title', lang)}</strong>, {pick(p, 'institution', lang)}{p.detail && <>. {pick(p, 'detail', lang)}</>}</div></li>)}</ul>
+    </section>
+
+    <section><h2>{L.funding}</h2>
+      <ul class="cv-rows">{research.funding.map((f) => <li><span>{f.years}</span><div><strong>{pick(f, 'grant', lang)}</strong> ({f.funder}) — {t.research.roles[f.role]}{f.topic && <>. {pick(f, 'topic', lang)}</>}{f.roleNote && <>. {pick(f, 'roleNote', lang)}</>}</div></li>)}</ul>
+    </section>
+
+    <section><h2>{L.articles}</h2>
+      <ol class="cv-pubs">{articles.map((p) => <li><span set:html={inlineMd(p.authors)} /> ({p.year}). {p.title}. <em>{p.journal}</em>{p.details && `, ${p.details}`}{p.inPress && ` (${t.pubs.inPress})`}.{p.doi && <> {p.doi.replace('https://doi.org/', 'doi:')}</>}</li>)}</ol>
+    </section>
+
+    <section><h2>{t.pubs.other}</h2>
+      <ol class="cv-pubs">{other.map((p) => <li><span set:html={inlineMd(p.authors)} /> ({p.year}). {p.title}. <em>{p.journal}</em>{p.details && `, ${p.details}`}.{p.doi && <> {p.doi.replace('https://doi.org/', 'doi:')}</>}</li>)}</ol>
+    </section>
+
+    {(['invited', 'contributed'] as const).map(async (k) => (
+      <section><h2>{t.talks[k]}</h2>
+        <ul class="cv-rows">{(await getTalks(k)).map((x) => { const it = talkItem(x, lang); return <li><span>{it.date}</span><div>{it.title}. {it.sub}</div></li>; })}</ul>
+      </section>
+    ))}
+
+    <section><h2>{L.teachingUsach}</h2>
+      <ul class="cv-rows">{(await getCourses()).map((c) => <li><span>{t.teaching.levels[c.level]}</span><div><strong>{pick(c, 'title', lang)}</strong> ({c.semesters.join(', ')})</div></li>)}</ul>
+      <h3>{t.teaching.earlier}</h3>
+      <ul class="cv-rows">{(await getEarlierTeaching()).map((e) => <li><span>{e.years}</span><div><strong>{e.institution}</strong>, {pick(e, 'role', lang)}{e.courses && <>. {pick(e, 'courses', lang)}</>}</div></li>)}</ul>
+      <h3>{t.teaching.curriculum}</h3>
+      <ul class="cv-bullets">{t.teaching.curriculumItems.map((x) => <li>{x}</li>)}</ul>
+    </section>
+
+    <section><h2>{L.supervision}</h2>
+      {(['graduated', 'ongoing'] as const).map((st) => (
+        <>
+          <h3>{st === 'graduated' ? L.graduated : L.ongoing}</h3>
+          <ul class="cv-rows">{sup.filter((s) => s.status === st).map((s) => <li><span>{s.year ?? ''}</span><div><strong>{s.name}</strong>, {pick(s, 'degree', lang)}{s.role && <> — {pick(s, 'role', lang)}</>}</div></li>)}</ul>
+        </>
+      ))}
+    </section>
+
+    <section><h2>{L.committees}</h2>
+      <ul class="cv-rows">{committees.map((c) => <li><span>{c.year}</span><div>{c.name}, {pick(c, 'degree', lang)}, {c.institution}</div></li>)}</ul>
+    </section>
+
+    <section><h2>{t.service.title}</h2>
+      {groupOrder.map((g) => (
+        <>
+          <h3>{t.service.groups[g]}</h3>
+          <ul class="cv-rows">{service.filter((s) => s.group === g).map((s) => <li><span>{s.years}</span><div><strong>{pick(s, 'title', lang)}</strong>{s.detail && <>. {pick(s, 'detail', lang)}</>}</div></li>)}</ul>
+        </>
+      ))}
+      <h3>{t.service.events}</h3>
+      <ul class="cv-rows">{events.map((e) => { const it = talkItem(e, lang); return <li><span>{it.date}</span><div><strong>{it.title}</strong>. {it.sub}</div></li>; })}</ul>
+    </section>
+
+    <section><h2>{t.about.awards}</h2>
+      <ul class="cv-rows">{cv.awards.map((a) => <li><span>{a.year}</span><div><strong>{pick(a, 'title', lang)}</strong>{a.detail && <>. {pick(a, 'detail', lang)}</>}</div></li>)}</ul>
+    </section>
+
+    <section><h2>{L.media}</h2>
+      <p>{pick(site, 'outreach', lang)}</p>
+      <ul class="cv-rows">{media.map((m) => <li><span>{formatYM(m.date, lang)}</span><div>{m.outlet}: {pick(m, 'topic', lang)}</div></li>)}</ul>
+    </section>
+
+    <p class="cv-foot">{L.updated}: {updated} · {site.url.replace('https://', '')}</p>
+  </article>
+</Layout>

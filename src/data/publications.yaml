@@ -1,232 +1,343 @@
-# Victor A. Pinto — publications. Single source for /publications and
-# /en/publications, plus the 3 most recent on both home pages.
+# Victor A. Pinto — publications (single source for the site and the CV PDF).
 #
-# type: article = peer-reviewed journal article; other = proceedings,
-#       book chapters, white papers.
-# citation: authors + title + journal. **bold** = me, *italic* = journal.
+# type: article = peer-reviewed journal article; other = proceedings, chapters, white papers.
+# authors: **bold** marks me. title: plain text. journal + details (volume, pages).
+# selected: true  -> shown on the home page ("Selected publications"). Keep 5-6.
 # Accepted papers without a DOI yet: omit `doi`, set `inPress: true`.
-# Pages sort newest first by year; within a year, file order is kept.
+# Order: newest year first; within a year, file order is kept.
 #
-# Last checked against the tenure-dossier publication table (DOIs verified): 2026-09-25.
+# Checked against the tenure dossier table and the PDFs in Research/published: 2026-09-27.
 
 - id: 2026-coelloguzmn
   year: 2026
   type: article
-  citation: Coello-Guzmán, M., **Pinto, V.A.**, Navarro, R., Moya, P.S. The effect of expansion and instabilities in the thermodynamic regulation of the young solar wind. *Astronomy & Astrophysics*.
+  authors: Coello-Guzmán, M., **Pinto, V.A.**, Navarro, R.E., Moya, P.S.
+  title: The effect of expansion and instabilities in the thermodynamic regulation of the young solar wind plasma
+  journal: Astronomy & Astrophysics
   inPress: true
 
 - id: 2026-marchezi
   year: 2026
   type: article
-  citation: 'Marchezi, J.P., ..., **Pinto, V.A.**, et al. On the effects of the solar wind structure in the global distribution of dBH/dt spikes. *JGR: Space Physics*.'
+  authors: Marchezi, J.P., Keesee, A., Coughlan, M., Mukundan, R., **Pinto, V.**, Da Silva, L.A., Alves, L.R., Connor, H., Hampton, D.
+  title: On the effects of the solar wind structure in the global distribution of dBH/dt spikes during geomagnetic storms
+  journal: 'JGR: Space Physics'
   doi: https://doi.org/10.1029/2025JA034994
 
 - id: 2026-caro
   year: 2026
   type: article
-  citation: Caro, G., ..., **Pinto, V.A.**, et al. Comparative performance analysis of five magnetometers for geomagnetic monitoring. *Sensors*.
+  authors: Caro, G., Carrasco, E., Diaz Peña, J., Urra, B., Rojo, E., Castro, L., Bravo, M., **Pinto, V.**, Stepanova, M., Godoy, A., Ovalle, E., Denardini, C.M., Su Chen, S.
+  title: Comparative performance analysis of five magnetometers for geomagnetic monitoring
+  journal: Sensors
+  details: 26, 4700
   doi: https://doi.org/10.3390/s26154700
 
 - id: 2026-inostroza
   year: 2026
   type: article
-  citation: 'Inostroza, A.M., Diaz-Peña, J., ..., **Pinto, V.A.**, et al. The Role of auroral phenomena in the dynamics of the outer radiation belt during the 1 June 2013 geomagnetic storm. *JGR: Space Physics*, 131, e2026JA035123.'
+  authors: Inostroza, A.M., Díaz Peña, J., Coello-Guzmán, M., Stepanova, M., **Pinto, V.A.**, Navarro, R.E., Espinoza, J.M., Kolomiytseva, E.A., Antonova, E.E.
+  title: The role of auroral phenomena in the dynamics of the outer radiation belt during the 1 June 2013 geomagnetic storm
+  journal: 'JGR: Space Physics'
+  details: 131, e2026JA035123
   doi: https://doi.org/10.1029/2026JA035123
 
 - id: 2026-stepanova
   year: 2026
   type: article
-  citation: Stepanova, M.V., **Pinto, V.A.**, Espinoza, C.M., Ovchinnikov, I., Antonova, E.E. Role of the solar wind dynamic pressure in the development of magnetospheric turbulence. *Physica Scripta*, 101(9).
+  authors: Stepanova, M.V., **Pinto, V.A.**, Espinoza, C.M., Ovchinnikov, I., Antonova, E.E.
+  title: Role of the solar wind dynamic pressure in the development of magnetospheric turbulence
+  journal: Physica Scripta
+  details: 101(9)
   doi: https://doi.org/10.1088/1402-4896/ae48b2
 
 - id: 2025-pinto
   year: 2025
   type: article
-  citation: '**Pinto, V.A.**, Espitia, Y., Zenteno-Quinteros, B., Stepanova, M.V., Moya, P.S. Radial evolution of ultrarelativistic electrons during enhancement events. *Physica Scripta*, 100(11).'
+  authors: '**Pinto, V.A.**, Espitia, Y., Zenteno-Quinteros, B., Stepanova, M.V., Moya, P.S.'
+  title: Radial evolution of ultrarelativistic electrons during enhancement events
+  journal: Physica Scripta
+  details: 100(11)
   doi: https://doi.org/10.1088/1402-4896/ae1332
+  selected: true
 
 - id: 2025-mukundan
   year: 2025
   type: article
-  citation: 'Mukundan, R., Keesee, A.M., Marchezi, J.P., **Pinto, V.A.**, Coughlan, M., Hampton, D. Localized geomagnetic disturbances: a statistical analysis of spatial scale. *Frontiers in Astronomy and Space Sciences*, 12, 1610276.'
+  authors: Mukundan, R., Keesee, A.M., Marchezi, J.P., **Pinto, V.A.**, Coughlan, M., Hampton, D.
+  title: 'Localized geomagnetic disturbances: a statistical analysis of spatial scale'
+  journal: Frontiers in Astronomy and Space Sciences
+  details: 12, 1610276
   doi: https://doi.org/10.3389/fspas.2025.1610276
 
 - id: 2025-coughlan
   year: 2025
   type: article
-  citation: Coughlan, M., Keesee, A., **Pinto, V.**, Mukundan, R., Marchezi, J.P., et al. Using machine learning explainability techniques to examine drivers of ground magnetic field localization. *Space Weather*, 23, e2025SW004391.
+  authors: Coughlan, M., Keesee, A., **Pinto, V.**, Mukundan, R., Marchezi, J.P., et al
+  title: Using machine learning explainability techniques to examine drivers of ground magnetic field localization
+  journal: Space Weather
+  details: 23, e2025SW004391
   doi: https://doi.org/10.1029/2025SW004391
 
 - id: 2025-lara
   year: 2025
   type: article
-  citation: Lara, C., **Pinto, V.A.**, Silva, J., Zenteno-Quinteros, B., Moya, P.S. On the Relationship Between ULF Wave Power and Changes of Relativistic Electron Fluxes in the Outer Radiation Belt. *Universe*, 11(5), 151.
+  authors: Lara, C., **Pinto, V.A.**, Silva, J., Zenteno-Quinteros, B., Moya, P.S.
+  title: On the Relationship Between ULF Wave Power and Changes of Relativistic Electron Fluxes in the Outer Radiation Belt
+  journal: Universe
+  details: 11(5), 151
   doi: https://doi.org/10.3390/universe11050151
 
 - id: 2024-gallardolacourt
   year: 2024
   type: article
-  citation: Gallardo-Lacourt, B., Nishimura, Y., ..., **Pinto, V.A.**, et al. Unexpected STEVE observations at high latitude during quiet geomagnetic conditions. *GRL*, 51, e2024GL110568.
+  authors: Gallardo-Lacourt, B., Nishimura, Y., ..., **Pinto, V.A.**, et al
+  title: Unexpected STEVE observations at high latitude during quiet geomagnetic conditions
+  journal: Geophysical Research Letters
+  details: 51, e2024GL110568
   doi: https://doi.org/10.1029/2024GL110568
 
 - id: 2024-stepanova
   year: 2024
   type: article
-  citation: 'Stepanova, M., **Pinto, V.**, Antonova, E. Regarding the relativistic electron dynamics in the outer radiation belt: a historical view. *Reviews of Modern Plasma Physics*, 8(1), 25.'
+  authors: Stepanova, M., **Pinto, V.**, Antonova, E.
+  title: 'Regarding the relativistic electron dynamics in the outer radiation belt: a historical view'
+  journal: Reviews of Modern Plasma Physics
+  details: 8(1), 25
   doi: https://doi.org/10.1007/s41614-024-00165-4
 
 - id: 2023-coughlan
   year: 2023
   type: article
-  citation: Coughlan, M., Keesee, A.M., **Pinto, V.A.**, Mukundan, R., Marchezi, J.P., et al. Probabilistic Forecasting of Ground Magnetic Perturbation Spikes at Mid-Latitude Stations. *Space Weather*, 21, e2023SW003446.
+  authors: Coughlan, M., Keesee, A.M., **Pinto, V.A.**, Mukundan, R., Marchezi, J.P., et al
+  title: Probabilistic Forecasting of Ground Magnetic Perturbation Spikes at Mid-Latitude Stations
+  journal: Space Weather
+  details: 21, e2023SW003446
   doi: https://doi.org/10.1029/2023SW003446
 
 - id: 2022-moya
   year: 2022
   type: article
-  citation: Moya, P.S., Zenteno-Quinteros, B., Gallo-Mendez, I., **Pinto, V.A.** The Role of O+ and He+ in the Propagation of Kinetic Alfven Waves in the Earth's Inner Magnetosphere. *ApJ*, 933, 32.
+  authors: Moya, P.S., Zenteno-Quinteros, B., Gallo-Mendez, I., **Pinto, V.A.**
+  title: The role of O+ and He+ in the propagation of kinetic Alfvén waves in the Earth's inner magnetosphere
+  journal: The Astrophysical Journal
+  details: 933, 32
   doi: https://doi.org/10.3847/1538-4357/ac713b
 
 - id: 2022-pinto
   year: 2022
   type: article
-  citation: '**Pinto, V.A.**, Keesee, A.M., Coughlan, M., Mukundan, R., Johnson, J.W., et al. Revisiting the Ground Magnetic Field Perturbations Challenge: A Machine Learning Perspective. *Front. Astron. Space Sci.* 9:869740.'
+  authors: '**Pinto, V.A.**, Keesee, A.M., Coughlan, M., Mukundan, R., Johnson, J.W., et al'
+  title: 'Revisiting the Ground Magnetic Field Perturbations Challenge: A Machine Learning Perspective'
+  journal: Frontiers in Astronomy and Space Sciences
+  details: 9, 869740
   doi: https://doi.org/10.3389/fspas.2022.869740
+  selected: true
 
 - id: 2022-blandin
   year: 2022
   type: article
-  citation: Blandin, M., Connor, H.K., ..., **Pinto, V.A.**, et al. Multi-Variate LSTM Prediction of Alaska Magnetometer Chain Utilizing a Coupled Model Approach. *Front. Astron. Space Sci.* 9:846291.
+  authors: Blandin, M., Connor, H.K., ..., **Pinto, V.A.**, et al
+  title: Multi-Variate LSTM Prediction of Alaska Magnetometer Chain Utilizing a Coupled Model Approach
+  journal: Frontiers in Astronomy and Space Sciences
+  details: 9, 846291
   doi: https://doi.org/10.3389/fspas.2022.846291
 
 - id: 2021-reyes
   year: 2021
   type: article
-  citation: Reyes, P.I., **Pinto, V.A.**, Moya, P.S. Geomagnetic storm occurrence and their relation with solar cycle phases. *Space Weather*, 19, e2021SW002766.
+  authors: Reyes, P.I., **Pinto, V.A.**, Moya, P.S.
+  title: Geomagnetic storm occurrence and their relation with solar cycle phases
+  journal: Space Weather
+  details: 19, e2021SW002766
   doi: https://doi.org/10.1029/2021SW002766
+  selected: true
 
 - id: 2021-stepanova
   year: 2021
   type: article
-  citation: Stepanova, M., **Pinto, V.A.**, Antonova, E.E. Adiabatic and non-adiabatic evolution of relativistic electrons in the heart of the outer radiation belt during the 1 June 2013 geomagnetic storm. *JASTP*, 212.
+  authors: Stepanova, M., **Pinto, V.A.**, Antonova, E.E.
+  title: Adiabatic and non-adiabatic evolution of relativistic electrons in the heart of the outer radiation belt during the 1 June 2013 geomagnetic storm
+  journal: Journal of Atmospheric and Solar-Terrestrial Physics
+  details: '212'
   doi: https://doi.org/10.1016/j.jastp.2020.105479
 
 - id: 2020-keesee
   year: 2020
   type: article
-  citation: Keesee, A.M., **Pinto, V.A.**, et al. Comparison of Deep Learning Techniques to Model Connections Between Solar Wind and Ground Magnetic Perturbations. *Front. Astron. Space Sci.* 7:550874.
+  authors: Keesee, A.M., **Pinto, V.A.**, et al
+  title: Comparison of Deep Learning Techniques to Model Connections Between Solar Wind and Ground Magnetic Perturbations
+  journal: Frontiers in Astronomy and Space Sciences
+  details: 7, 550874
   doi: https://doi.org/10.3389/fspas.2020.550874
 
 - id: 2020-pinto
   year: 2020
   type: article
-  citation: '**Pinto, V.A.**, Bortnik, J., Moya, P.S., Lyons, L.R., Sibeck, D.G., et al. Radial response of outer radiation belt relativistic electrons during enhancement events at geostationary orbit. *JGR: Space Physics*, 125, e2019JA027660.'
+  authors: '**Pinto, V.A.**, Bortnik, J., Moya, P.S., Lyons, L.R., Sibeck, D.G., et al'
+  title: Radial response of outer radiation belt relativistic electrons during enhancement events at geostationary orbit
+  journal: 'JGR: Space Physics'
+  details: 125, e2019JA027660
   doi: https://doi.org/10.1029/2019JA027660
+  selected: true
 
 - id: 2020-pinto-2
   year: 2020
   type: article
-  citation: '**Pinto, V.A.**, Zhang, X.-J., Mourenas, D., Bortnik, J., Artemyev, A.V., et al. On the confinement of ultrarelativistic electron remnant belts to low L-shells. *JGR: Space Physics*, 125, e2019JA027469.'
+  authors: '**Pinto, V.A.**, Zhang, X.-J., Mourenas, D., Bortnik, J., Artemyev, A.V., et al'
+  title: On the confinement of ultrarelativistic electron remnant belts to low L-shells
+  journal: 'JGR: Space Physics'
+  details: 125, e2019JA027469
   doi: https://doi.org/10.1029/2019JA027469
 
 - id: 2019-pinto
   year: 2019
   type: article
-  citation: '**Pinto, V.A.**, Mourenas, D., Bortnik, J., Zhang, X.-J., Artemyev, A.V., et al. Decay of ultrarelativistic remnant belt electrons through scattering by plasmaspheric hiss. *JGR: Space Physics*, 124.'
+  authors: '**Pinto, V.A.**, Mourenas, D., Bortnik, J., Zhang, X.-J., Artemyev, A.V., et al'
+  title: Decay of ultrarelativistic remnant belt electrons through scattering by plasmaspheric hiss
+  journal: 'JGR: Space Physics'
+  details: '124'
   doi: https://doi.org/10.1029/2019JA026509
+  selected: true
 
 - id: 2019-gabrielse
   year: 2019
   type: article
-  citation: Gabrielse, C., **Pinto, V.A.**, Nishimura, Y., Lyons, L., et al. Storm time mesoscale plasma flows in the nightside high-latitude ionosphere. *GRL*, 46, 4079-4088.
+  authors: Gabrielse, C., **Pinto, V.A.**, Nishimura, Y., Lyons, L., et al
+  title: Storm time mesoscale plasma flows in the nightside high-latitude ionosphere
+  journal: Geophysical Research Letters
+  details: 46, 4079-4088
   doi: https://doi.org/10.1029/2018GL081539
 
 - id: 2019-stepanova
   year: 2019
   type: article
-  citation: 'Stepanova, M., Antonova, E.E., Moya, P.S., **Pinto, V.A.**, Valdivia, J.A. Multisatellite analysis of plasma pressure in the inner magnetosphere during the 1 June 2013 geomagnetic storm. *JGR: Space Physics*, 124, 1187-1202.'
+  authors: Stepanova, M., Antonova, E.E., Moya, P.S., **Pinto, V.A.**, Valdivia, J.A.
+  title: Multisatellite analysis of plasma pressure in the inner magnetosphere during the 1 June 2013 geomagnetic storm
+  journal: 'JGR: Space Physics'
+  details: 124, 1187-1202
   doi: https://doi.org/10.1029/2018JA025965
 
 - id: 2018-pinto
   year: 2018
   type: article
-  citation: '**Pinto, V.A.**, Bortnik, J., Moya, P.S., Lyons, L.R., Sibeck, D.G., et al. Characteristics, occurrence, and decay rates of remnant belts associated with three-belt events in the Earth''s radiation belts. *GRL*, 45, 12099-12107.'
+  authors: '**Pinto, V.A.**, Bortnik, J., Moya, P.S., Lyons, L.R., Sibeck, D.G., et al'
+  title: Characteristics, occurrence, and decay rates of remnant belts associated with three-belt events in the Earth's radiation belts
+  journal: Geophysical Research Letters
+  details: 45, 12099-12107
   doi: https://doi.org/10.1029/2018GL080274
+  selected: true
 
 - id: 2018-pinto-2
   year: 2018
   type: article
-  citation: '**Pinto, V.A.**, Kim, H.-J., Lyons, L.R., Bortnik, J. Interplanetary parameters leading to relativistic electron enhancement and persistent depletion events at geosynchronous orbit. *JGR: Space Physics*, 123, 1134-1145.'
+  authors: '**Pinto, V.A.**, Kim, H.-J., Lyons, L.R., Bortnik, J.'
+  title: Interplanetary parameters leading to relativistic electron enhancement and persistent depletion events at geosynchronous orbit
+  journal: 'JGR: Space Physics'
+  details: 123, 1134-1145
   doi: https://doi.org/10.1002/2017JA024902
 
 - id: 2018-antonova
   year: 2018
   type: article
-  citation: Antonova, E.E., Stepanova, M.V., Moya, P.S., **Pinto, V.A.**, et al. Processes in auroral oval and outer electron radiation belt. *Earth, Planets and Space*, 70, 127.
+  authors: Antonova, E.E., Stepanova, M.V., Moya, P.S., **Pinto, V.A.**, et al
+  title: Processes in auroral oval and outer electron radiation belt
+  journal: Earth, Planets and Space
+  details: 70, 127
   doi: https://doi.org/10.1186/s40623-018-0898-1
 
 - id: 2017-farias
   year: 2017
   type: article
-  citation: Farias, C., **Pinto, V.A.**, Moya, P.S. What is the temperature of a moving body? *Scientific Reports*, 7(1), 17657.
+  authors: Farías, C., **Pinto, V.A.**, Moya, P.S.
+  title: What is the temperature of a moving body?
+  journal: Scientific Reports
+  details: 7(1), 17657
   doi: https://doi.org/10.1038/s41598-017-17526-4
 
 - id: 2017-moya
   year: 2017
   type: article
-  citation: 'Moya, P.S., **Pinto, V.A.**, Sibeck, D.G., Kanekal, S.G., Baker, D.N. On the effect of geomagnetic storms on relativistic electrons in the outer radiation belt. *JGR: Space Physics*, 122, 11100-11108.'
+  authors: Moya, P.S., **Pinto, V.A.**, Sibeck, D.G., Kanekal, S.G., Baker, D.N.
+  title: On the effect of geomagnetic storms on relativistic electrons in the outer radiation belt
+  journal: 'JGR: Space Physics'
+  details: 122, 11100-11108
   doi: https://doi.org/10.1002/2017JA024735
 
 - id: 2015-kim
   year: 2015
   type: article
-  citation: Kim, H.-J., Lyons, L., **Pinto, V.A.**, Wang, C.-P., Kim, K.-C. Revisit of relationship between geosynchronous relativistic electron enhancements and magnetic storms. *GRL*, 42, 6155-6161.
+  authors: Kim, H.-J., Lyons, L., **Pinto, V.A.**, Wang, C.-P., Kim, K.-C.
+  title: Revisit of relationship between geosynchronous relativistic electron enhancements and magnetic storms
+  journal: Geophysical Research Letters
+  details: 42, 6155-6161
   doi: https://doi.org/10.1002/2015GL065192
 
 - id: 2015-moya
   year: 2015
   type: article
-  citation: 'Moya, P.S., **Pinto, V.A.**, Vinas, A.F., Sibeck, D.G., et al. Weak kinetic Alfvén waves turbulence during the 14 November 2012 geomagnetic storm. *JGR: Space Physics*, 120, 5504-5523.'
+  authors: Moya, P.S., **Pinto, V.A.**, Vinas, A.F., Sibeck, D.G., et al
+  title: Weak kinetic Alfvén waves turbulence during the 14 November 2012 geomagnetic storm
+  journal: 'JGR: Space Physics'
+  details: 120, 5504-5523
   doi: https://doi.org/10.1002/2014JA020281
 
 - id: 2011-pinto
   year: 2011
   type: article
-  citation: '**Pinto, V.A.**, Stepanova, M., Antonova, E.E., Valdivia, J.A. Estimation of the eddy-diffusion coefficients in the plasma sheet using THEMIS satellite data. *JASTP*, 73(11-12), 1472-1477.'
+  authors: '**Pinto, V.A.**, Stepanova, M., Antonova, E.E., Valdivia, J.A.'
+  title: Estimation of the eddy-diffusion coefficients in the plasma sheet using THEMIS satellite data
+  journal: Journal of Atmospheric and Solar-Terrestrial Physics
+  details: 73(11-12), 1472-1477
   doi: https://doi.org/10.1016/j.jastp.2011.05.007
 
 - id: 2011-stepanova
   year: 2011
   type: article
-  citation: Stepanova, M., **Pinto, V.A.**, Valdivia, J.A., Antonova, E.E. Spatial distribution of the eddy diffusion coefficients in the plasma sheet during quiet time and substorms from THEMIS satellite data. *JGR*, 116, A00I24.
+  authors: Stepanova, M., **Pinto, V.A.**, Valdivia, J.A., Antonova, E.E.
+  title: Spatial distribution of the eddy diffusion coefficients in the plasma sheet during quiet time and substorms from THEMIS satellite data
+  journal: Journal of Geophysical Research
+  details: 116, A00I24
   doi: https://doi.org/10.1029/2010JA015887
 
 - id: 2023-antonova
   year: 2023
   type: other
-  citation: 'Antonova, E.E., ..., **Pinto, V.A.**, et al. Formation of the Outer Radiation Belt: Adiabatic Effect and Stochastic Acceleration. *Problems of Geocosmos-2022*, Springer.'
+  authors: Antonova, E.E., ..., **Pinto, V.A.**, et al
+  title: 'Formation of the Outer Radiation Belt: Adiabatic Effect and Stochastic Acceleration'
+  journal: Problems of Geocosmos–2022, Springer Proceedings in Earth and Environmental Sciences
   doi: https://doi.org/10.1007/978-3-031-40728-4_23
 
 - id: 2023-turner
   year: 2023
   type: other
-  citation: 'Turner, D.L., ..., incl. **Pinto, V.A.** Cross-scale physics and the acceleration of particles in collisionless plasmas throughout the Heliosphere and beyond: III. Radiation belts. *Whitepaper for the Heliophysics Decadal Survey* (#400).'
+  authors: Turner, D.L., et al. (incl. **Pinto, V.A.**)
+  title: Cross-scale physics in the radiation belts
+  journal: Bulletin of the AAS, 55 (Heliophysics Decadal Survey white paper)
   doi: https://doi.org/10.3847/25c2cfeb.7637306e
 
 - id: 2023-bashir
   year: 2023
   type: other
-  citation: 'Bashir, M.F., ..., incl. **Pinto, V.A.** Recognition for All: A Way Forward to Enhance Diversity, Equity and Inclusion in Space Physics. *Whitepaper for the Heliophysics Decadal Survey* (#025).'
+  authors: Bashir, M.F., et al. (incl. **Pinto, V.A.**)
+  title: 'Recognition for all: a way forward to enhance diversity, equity and inclusion in space physics'
+  journal: Bulletin of the AAS, 55 (Heliophysics Decadal Survey white paper)
   doi: https://doi.org/10.3847/25c2cfeb.bff53876
 
 - id: 2019-reyes
   year: 2019
   type: other
-  citation: Reyes, P., **Pinto, V.A.**, Moya, P.S. Statistical analysis of geomagnetic storms and their relation with the solar cycle. *IAU Proceedings Vol. 15, S354*, 224-227.
+  authors: Reyes, P., **Pinto, V.A.**, Moya, P.S.
+  title: Statistical analysis of geomagnetic storms and their relation with the solar cycle
+  journal: Proceedings of the International Astronomical Union
+  details: 15(S354), 224-227
   doi: https://doi.org/10.1017/S1743921320000903
 
 - id: 2008-silva
   year: 2008
   type: other
-  citation: 'Silva et al. (incl. **Pinto, V.A.**). Hard X-ray measurement from a plasma focus of low energy. *Journal of Physics: Conference Series*, 134, 012045.'
+  authors: Silva, P., Farías, C., L'Huissier, P., **Pinto, V.**, Zambra, M., Soto, L.
+  title: Hard X-ray measurement from a plasma focus of low energy
+  journal: 'Journal of Physics: Conference Series'
+  details: 134, 012045
   doi: https://doi.org/10.1088/1742-6596/134/1/012045

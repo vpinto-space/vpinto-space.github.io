@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import SectionHead from '../components/SectionHead.astro';
+import Portrait from '../components/Portrait.astro';
+import CvButtons from '../components/CvButtons.astro';
+import DatedList from '../components/DatedList.astro';
+import Pager from '../components/Pager.astro';
+import { ui, routes, pick, type Lang } from '../lib/i18n';
+import { site, cv } from '../lib/data';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const long: string[] = pick(site.bio, 'long', lang);
+---
+<Layout lang={lang} title={t.about.title} route="about" description={t.about.lead}>
+  <PageHeader eyebrow={t.about.eyebrow} title={t.about.title} lead={t.about.lead} back={{ href: `${routes.home[lang]}#top`, label: t.backHome }} />
+
+  <section class="band">
+    <div class="wrap about-grid">
+      <Portrait lang={lang} />
+      <div class="prose">
+        {long.map((p) => <p>{p}</p>)}
+        <CvButtons lang={lang} other />
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-alt" id="press-bio">
+    <div class="wrap">
+      <SectionHead title={t.about.pressTitle} text={t.about.pressNote} />
+      <div class="quote-box">
+        <p id="press-bio-text">{pick(site.bio, 'press', lang)}</p>
+        <button class="btn btn-small" type="button" data-copy="press-bio-text" data-done={t.about.copied}>{t.about.copy}</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap two-col">
+      <div>
+        <SectionHead title={t.about.positions} />
+        <DatedList items={cv.positions.map((p) => ({ date: p.years, title: pick(p, 'title', lang), sub: pick(p, 'institution', lang), note: pick(p, 'detail', lang) }))} />
+      </div>
+      <div>
+        <SectionHead title={t.about.education} />
+        <DatedList items={cv.education.map((e) => ({ date: e.year, title: pick(e, 'degree', lang), sub: e.institution, note: pick(e, 'detail', lang) }))} />
+        <div class="spacer"></div>
+        <SectionHead title={t.about.awards} />
+        <DatedList items={cv.awards.map((a) => ({ date: a.year, title: pick(a, 'title', lang), sub: pick(a, 'detail', lang) }))} />
+      </div>
+    </div>
+  </section>
+  <Pager lang={lang} current="about" />
+</Layout>

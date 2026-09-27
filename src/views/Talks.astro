@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import SectionHead from '../components/SectionHead.astro';
+import DatedList from '../components/DatedList.astro';
+import Pager from '../components/Pager.astro';
+import { ui, routes, type Lang } from '../lib/i18n';
+import { getTalks } from '../lib/content';
+import { talkItem } from '../lib/format';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const sections = [
+  { id: 'invited', title: t.talks.invited, items: await getTalks('invited') },
+  { id: 'contributed', title: t.talks.contributed, items: await getTalks('contributed') },
+  { id: 'organized', title: t.talks.organized, items: await getTalks('organized') },
+];
+---
+<Layout lang={lang} title={t.talks.title} route="talks" description={t.talks.lead}>
+  <PageHeader eyebrow={t.talks.eyebrow} title={t.talks.title} lead={t.talks.lead} back={{ href: `${routes.home[lang]}#talks`, label: t.backHome }} />
+  {sections.map((s, i) => (
+    <section class:list={['band', { 'band-alt': i % 2 === 1 }]} id={s.id}>
+      <div class="wrap">
+        <SectionHead title={s.title} />
+        <DatedList items={s.items.map((x) => talkItem(x, lang))} />
+      </div>
+    </section>
+  ))}
+  <Pager lang={lang} current="talks" />
+</Layout>

@@ -1,28 +1,13 @@
-## Development
+# Notes for AI coding agents
 
-When starting the dev server, use background mode:
+- Read `README.md` (architecture) and `CONTENIDO.md` (content model) first.
+- Content lives in `src/data/*.yaml`, validated by `src/content.config.ts` and `src/lib/data.ts`. Never hardcode facts (roles, projects, publications, talks, dates) in `.astro` files.
+- One view per page in `src/views/` with a `lang` prop; `src/pages/*` only wrap views. Don't duplicate templates per language. UI strings go in `src/lib/i18n.ts`.
+- Styling: only `src/styles/global.css` tokens and classes. No inline `style=`. Reuse components (`DatedList`, `PubList`, `SectionHead`, `PageHeader`, `Pager`, `Portrait`, …) instead of one-off markup.
+- Astro's `file()` loader returns entries sorted by id; `src/lib/content.ts` restores file order. Use its getters, not `getCollection` directly.
+- Content rules: facts must be verifiable (the tenure dossier is the source of truth); never publish projects under evaluation, internal grant IDs, amounts or personal data (phone numbers); actions, not unverified counts. People, projects and news belong to the HelioUSACH site: link to it instead of copying.
+- Put audits/plans/reports in `Web/docs/` (outside this repo), not in the repo root.
+- Verify with `npm run build` before committing. After changing CV data, run `npm run cv` so the PDFs match.
 
-```
-astro dev --background
-```
-
-Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
-
-## Current state (as of Aug 2026)
-
-- Astro `^7.2.0`. Upgraded from `^5.11.0` in Aug 2026 to resolve `npm audit` high-severity findings (XSS advisories in Astro's compiler, plus transitive `esbuild`/`sharp` CVEs). See README.md "Dependency history" for details.
-- `npm audit` should currently report clean. If it doesn't, check whether the fix requires a major bump (`npm audit fix --force`) before applying it blindly — read the changelog/migration guide for the target version first, and check this repo for content collections, Markdown files, or `href="#"` anchors, since those are what typically break across Astro majors (none of that exists here as of this writing, but re-check if it's changed).
-- `.github/workflows/deploy.yml` runs `build` on both push-to-`main` and pull requests; `deploy` only runs on push. Don't remove the `if: github.event_name == 'push'` guards on the `deploy` job and the `upload-pages-artifact` step — without them, PR runs would attempt to deploy.
-
-## Documentation
-
-Full documentation: https://docs.astro.build
-
-Consult these guides before working on related tasks:
-
-- [Adding pages, dynamic routes, or middleware](https://docs.astro.build/en/guides/routing/)
-- [Working with Astro components](https://docs.astro.build/en/basics/astro-components/)
-- [Using React, Vue, Svelte, or other framework components](https://docs.astro.build/en/guides/framework-components/)
-- [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
-- [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
-- [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+## Dev server
+Use background mode: `astro dev --background`; manage with `astro dev stop|status|logs`.

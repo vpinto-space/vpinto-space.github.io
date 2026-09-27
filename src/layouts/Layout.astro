@@ -1,34 +1,49 @@
 ---
+// Page shell: <head>, header with navigation, footer. Every page uses it.
 import '../styles/global.css';
-const lang = Astro.currentLocale === 'en' ? 'en' : 'es';
-const { title, description } = Astro.props;
-const p = (path) => lang === 'es' ? path : `/en${path}`;
-// ES pages live at /x/, EN pages at /en/x/ (same slugs).
-const site = 'https://victorapinto.com';
+import { ui, routes, pick, navOrder, type Lang, type RouteKey, type NavKey } from '../lib/i18n';
+import { site } from '../lib/data';
+import ProfileLinks from '../components/ProfileLinks.astro';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description?: string;
+  /** Page identity: 'home' or a detail page. Drives the ES/EN switch and the active nav item. */
+  route?: RouteKey;
+  /** Set for pages that should not be indexed (404, CV print view). */
+  noindex?: boolean;
+  /** Bare page (no header/footer), e.g. the CV print view. */
+  bare?: boolean;
+}
+
+const { lang, title, description, route, noindex = false, bare = false } = Astro.props;
+const t = ui[lang];
+const base = site.url;
+const alt = route ? routes[route] : routes.home;
+const otherLang: Lang = lang === 'es' ? 'en' : 'es';
 const here = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
-const esPath = here.replace(/^\/en(\/|$)/, '/');
-const enPath = esPath === '/' ? '/en/' : `/en${esPath}`;
-const canonicalUrl = `${site}${here}`;
-const pageTitle = `${title} — Victor Pinto`;
+const isHome = route === 'home';
+const pageTitle = isHome ? `${site.name} — ${pick(site, 'role', lang)}, USACH` : `${title} — ${site.shortName}`;
+const desc = description ?? pick(site.bio, 'short', lang);
+// One-page scroller: nav items are home sections. On detail pages they point
+// back to the home section; the section the page expands is marked active.
+const navHref = (k: NavKey) => `${isHome ? '' : routes.home[lang]}#${k}`;
+const activeNav = route && route !== 'home' && (navOrder as readonly string[]).includes(route) ? (route as NavKey) : undefined;
 
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  name: 'Victor A. Pinto Abarzúa',
-  url: 'https://victorapinto.com',
-  jobTitle: 'Assistant Professor of Physics',
-  affiliation: {
-    '@type': 'CollegeOrUniversity',
-    name: 'Universidad de Santiago de Chile (USACH)',
-  },
-  email: 'mailto:victor.pinto@usach.cl',
-  sameAs: [
-    'https://scholar.google.com/citations?user=nEqGWqoAAAAJ',
-    'https://orcid.org/0000-0003-1210-167X',
-    'https://github.com/vpinto-space',
-    'https://twitter.com/vpintoa',
-    'https://www.researchgate.net/profile/Victor-Pinto-9',
+  name: site.name,
+  url: base,
+  jobTitle: pick(site, 'role', 'en'),
+  affiliation: [
+    { '@type': 'CollegeOrUniversity', name: 'Universidad de Santiago de Chile (USACH)' },
+    ...site.affiliations.slice(1).map((a) => ({ '@type': 'Organization', name: a.short ?? a.name, url: a.url })),
   ],
+  email: `mailto:${site.contact.email}`,
+  sameAs: site.profiles.map((p) => p.url),
+  ...(site.portrait ? { image: `${base}${site.portrait}` } : {}),
 };
 ---
 
@@ -37,59 +52,147 @@ const personSchema = {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline>
+      (function () {
+        var theme = 'day';
+        try { theme = localStorage.getItem('theme') || (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'day'); } catch (e) {}
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.classList.add('js');
+      })();
+    </script>
     <title>{pageTitle}</title>
-    <meta name="description" content={description} />
+    <meta name="description" content={desc} />
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="canonical" href={canonicalUrl} />
-    <link rel="alternate" hreflang="es" href={`${site}${esPath}`} />
-    <link rel="alternate" hreflang="en" href={`${site}${enPath}`} />
-    <link rel="alternate" hreflang="x-default" href={`${site}${esPath}`} />
-
-    <!-- Open Graph / Twitter Card. TODO: add og:image / twitter:image once a shared preview image exists. -->
+    <link rel="canonical" href={`${base}${here}`} />
+    {route && <link rel="alternate" hreflang="es" href={`${base}${alt.es}`} />}
+    {route && <link rel="alternate" hreflang="en" href={`${base}${alt.en}`} />}
+    {route && <link rel="alternate" hreflang="x-default" href={`${base}${alt.es}`} />}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
     <meta property="og:type" content="profile" />
     <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:site_name" content="Victor Pinto" />
+    <meta property="og:description" content={desc} />
+    <meta property="og:url" content={`${base}${here}`} />
+    {site.portrait && <meta property="og:image" content={`${base}${site.portrait}`} />}
+    <meta property="og:site_name" content={site.shortName} />
     <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'es_CL'} />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content={pageTitle} />
-    <meta name="twitter:description" content={description} />
-
     <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
   </head>
-  <body>
-    <header>
-      <nav>
-        <a href={p('/')} class="brand">Victor A. Pinto Abarzúa</a>
-        <div class="nav-links">
-          <a href={p('/about')}>{lang === 'en' ? 'About' : 'Sobre mí'}</a>
-          <a href={p('/research')}>{lang === 'en' ? 'Research' : 'Investigación'}</a>
-          <a href={p('/publications')}>{lang === 'en' ? 'Publications' : 'Publicaciones'}</a>
-          <a href={p('/teaching')}>{lang === 'en' ? 'Teaching' : 'Docencia'}</a>
-          <a href={p('/service')}>{lang === 'en' ? 'Service' : 'Servicio'}</a>
-          <a href={p('/media')}>{lang === 'en' ? 'Media' : 'Medios'}</a>
-          <a href="https://heliousach.github.io" target="_blank" rel="noopener" class="badge badge-accent">{lang === 'en' ? 'Research Group →' : 'Grupo de investigación →'}</a>
-          <span class="lang-toggle">
-            {lang === 'es'
-              ? <a href={enPath} hreflang="en" lang="en">EN</a>
-              : <a href={esPath} hreflang="es" lang="es">ES</a>
-            }
-          </span>
+  <body class:list={{ bare }}>
+    {!bare && (
+      <>
+      <a class="skip" href="#main">{t.skip}</a>
+      <header class="site-header">
+        <div class="wrap">
+          <a class="brand" href={routes.home[lang]}>
+            <span class="brand-mark" aria-hidden="true">{site.initials}</span>
+            <span class="brand-name">{site.shortName}</span>
+          </a>
+          <nav class="nav" aria-label={t.navLabel}>
+            <ul class="nav-links" id="nav-links">
+              {navOrder.map((k) => (
+                <li><a href={navHref(k)} data-nav={k} aria-current={activeNav === k ? 'true' : undefined}>{t.nav[k]}</a></li>
+              ))}
+            </ul>
+            <div class="nav-tools">
+              <a class="lang-switch" href={alt[otherLang]} hreflang={otherLang} lang={otherLang} title={t.otherLangName}>{t.otherLang}</a>
+              <button id="theme-toggle" class="icon-btn theme-toggle" type="button" aria-label={t.themeToggle}>
+                <svg class="icon-day" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                <svg class="icon-night" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+              </button>
+              <button id="menu-toggle" class="icon-btn menu-toggle" type="button" aria-label={t.menu} aria-controls="nav-links" aria-expanded="false">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+              </button>
+            </div>
+          </nav>
         </div>
-      </nav>
-    </header>
-    <main><slot /></main>
-    <footer>
-      <div class="footer-links">
-        <a href="mailto:victor.pinto@usach.cl">Email</a>
-        <a href="https://scholar.google.com/citations?user=nEqGWqoAAAAJ" target="_blank" rel="noopener">Scholar</a>
-        <a href="https://orcid.org/0000-0003-1210-167X" target="_blank" rel="noopener">ORCID</a>
-        <a href="https://github.com/vpinto-space" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://twitter.com/vpintoa" target="_blank" rel="noopener">X</a>
-        <a href="https://www.researchgate.net/profile/Victor-Pinto-9" target="_blank" rel="noopener">ResearchGate</a>
-      </div>
-      <p class="footer-fine">&copy; {new Date().getFullYear()} Victor A. Pinto Abarzúa</p>
-    </footer>
+      </header>
+      </>
+    )}
+
+    <main id="main"><slot /></main>
+
+    {!bare && (
+      <footer class="site-footer">
+        <div class="wrap">
+          <div class="footer-id">
+            <p class="footer-name">{site.name}</p>
+            <p>{pick(site, 'role', lang)} · {site.institution}</p>
+            <p><a href={`mailto:${site.contact.email}`}>{site.contact.email}</a></p>
+          </div>
+          <div>
+            <h2 class="footer-h">{t.footer.affiliations}</h2>
+            <ul class="footer-list">
+              {site.affiliations.map((a) => <li><a href={a.url} target="_blank" rel="noopener">{a.short ?? pick(a, 'name', lang)}</a></li>)}
+              <li><a href={routes.about[lang]}>{t.nav.about}</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-h">{t.footer.profiles}</h2>
+            <ProfileLinks class="footer-list" />
+          </div>
+        </div>
+        <p class="wrap fine">© {new Date().getFullYear()} {site.name}</p>
+      </footer>
+    )}
+
+    <script is:inline>
+      (function () {
+        var root = document.documentElement;
+        var theme = document.getElementById('theme-toggle');
+        if (theme) {
+          theme.setAttribute('aria-pressed', root.getAttribute('data-theme') === 'night' ? 'true' : 'false');
+          theme.addEventListener('click', function () {
+            var next = root.getAttribute('data-theme') === 'night' ? 'day' : 'night';
+            root.setAttribute('data-theme', next);
+            try { localStorage.setItem('theme', next); } catch (e) {}
+            theme.setAttribute('aria-pressed', next === 'night' ? 'true' : 'false');
+          });
+        }
+        var menu = document.getElementById('menu-toggle');
+        var header = document.querySelector('.site-header');
+        if (menu && header) {
+          menu.addEventListener('click', function () {
+            var open = header.getAttribute('data-open') === 'true';
+            header.setAttribute('data-open', open ? 'false' : 'true');
+            menu.setAttribute('aria-expanded', open ? 'false' : 'true');
+          });
+          header.querySelectorAll('.nav-links a').forEach(function (a) {
+            a.addEventListener('click', function () { header.setAttribute('data-open', 'false'); menu.setAttribute('aria-expanded', 'false'); });
+          });
+        }
+        // Home page: highlight the nav item of the section in view.
+        var spy = document.querySelectorAll('[data-section]');
+        if (spy.length && 'IntersectionObserver' in window) {
+          var links = document.querySelectorAll('.nav-links a[data-nav]');
+          var so = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+              if (!e.isIntersecting) return;
+              var key = e.target.getAttribute('data-section');
+              links.forEach(function (a) {
+                if (a.getAttribute('data-nav') === key) a.setAttribute('aria-current', 'true');
+                else a.removeAttribute('aria-current');
+              });
+            });
+          }, { rootMargin: '-45% 0px -50% 0px' });
+          spy.forEach(function (el) { so.observe(el); });
+        }
+        // Copy buttons (press bio).
+        document.querySelectorAll('[data-copy]').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var src = document.getElementById(btn.getAttribute('data-copy'));
+            if (!src || !navigator.clipboard) return;
+            navigator.clipboard.writeText(src.innerText.trim()).then(function () {
+              var label = btn.textContent;
+              btn.textContent = btn.getAttribute('data-done') || label;
+              setTimeout(function () { btn.textContent = label; }, 1800);
+            });
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

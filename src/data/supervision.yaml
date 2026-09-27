@@ -1,0 +1,106 @@
+# Thesis supervision. Used by the CV PDF only: on the website, students appear
+# on the HelioUSACH team page (the group site owns people). The site shows a
+# one-line summary from site.yaml instead.
+#
+# status: graduated | ongoing ; level: magister | pregrado | postdoc
+
+- id: espitia
+  name: Yulissa Espitia
+  level: magister
+  degree: Magíster en Ciencias Físicas, USACH
+  degree_en: M.Sc. in Physics, USACH
+  year: 2025
+  role: Profesor guía
+  role_en: Advisor
+  status: graduated
+
+- id: castillo
+  name: Carlos Castillo
+  level: magister
+  degree: Magíster en Ciencias Físicas, USACH
+  degree_en: M.Sc. in Physics, USACH
+  year: 2025
+  role: Co-guía
+  role_en: Co-advisor
+  status: graduated
+
+- id: lara
+  name: Christopher Lara
+  level: magister
+  degree: Magíster en Ciencias, mención Física, U. de Chile
+  degree_en: M.Sc. in Physics, Universidad de Chile
+  year: 2024
+  role: Co-tutor
+  role_en: Co-advisor
+  status: graduated
+
+- id: caro
+  name: Guillermo Caro
+  level: pregrado
+  degree: Ingeniería Física, USACH
+  degree_en: Physics Engineering, USACH
+  year: 2025
+  role: Profesor guía
+  role_en: Advisor
+  status: graduated
+
+- id: jelcic
+  name: Yerko Jelcic
+  level: pregrado
+  degree: Ingeniería Física, USACH
+  degree_en: Physics Engineering, USACH
+  year: 2024
+  role: Profesor guía
+  role_en: Advisor
+  status: graduated
+
+- id: ruiz
+  name: Javier Ruiz
+  level: pregrado
+  degree: Ingeniería Física, USACH
+  degree_en: Physics Engineering, USACH
+  year: 2024
+  role: Co-director
+  role_en: Co-advisor
+  status: graduated
+
+- id: reyes
+  name: Paula Reyes
+  level: magister
+  degree: Magíster en Ciencias, mención Física, U. de Chile
+  degree_en: M.Sc. in Physics, Universidad de Chile
+  role: Co-guía
+  role_en: Co-advisor
+  status: ongoing
+
+- id: munoz
+  name: Dafhne Muñoz
+  level: pregrado
+  degree: Ingeniería en Astrofísica, USACH
+  degree_en: Astrophysics Engineering, USACH
+  status: ongoing
+
+- id: pena
+  name: Camila Peña
+  level: pregrado
+  degree: Ingeniería Física, USACH
+  degree_en: Physics Engineering, USACH
+  status: ongoing
+
+- id: zenteno
+  name: Dra. Bea Zenteno-Quinteros
+  level: postdoc
+  degree: FONDECYT de Postdoctorado (ANID), 2025–
+  degree_en: FONDECYT Postdoctoral grant (ANID), 2025–
+  role: Patrocinador
+  role_en: Sponsor
+  status: ongoing
+
+- id: coello
+  name: Dra. Matilde Coello
+  level: postdoc
+  degree: DICYT Postdoctorado (USACH), 2024–2026
+  degree_en: DICYT Postdoctoral grant (USACH), 2024–2026
+  role: Patrocinador
+  role_en: Sponsor
+  status: ongoing
